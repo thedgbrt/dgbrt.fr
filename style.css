@@ -1,0 +1,65 @@
+/* reset */
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,font,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}:focus{outline:0}ins{text-decoration:none}del{text-decoration:line-through}table{border-collapse:collapse;border-spacing:0}
+
+/* grid */
+
+
+
+/* fonts */
+.millerheadline {
+  font-family: "Miller Headline";
+  font-style: normal;
+  font-weight: normal;
+}
+
+div.log{
+	position: fixed;
+	top: 0;
+	right: 0;
+	font-size: 14px;
+	text-align: right;
+}
+body{
+	font-size: 19px;
+	font-family: "Open Sans", Arial, sans-serif;
+	color: #000;
+	background: #fff;
+	padding:  0;
+	margin:0 auto;
+	width:  940px;
+}
+
+/* content */
+h1{
+	text-rendering: optimizeLegibility;
+	font-size:64px;
+}
+
+header p{
+	font-size:22px;
+	line-height:29px;
+}
+
+/* navigation */
+nav a{
+	background: black;
+	color: yellow;
+	display: block;
+	padding:  14px 28px;
+	text-decoration:none;
+	-moz-border-radius: 6px; /* Firefox */
+	-webkit-border-radius: 6px; /* Safari, Chrome */
+	border-radius: 6px; /* CSS3 */
+}
+	nav a:hover, nav a:focus{
+		-moz-box-shadow: 0 1px 1px #000000;
+		-webkit-box-shadow: 0 1px 1px #000000;
+		box-shadow: 0 1px 1px #000000;
+	}
+nav a.prev{margin-bottom:1.5em;}
+nav a.next{
+	position: fixed;
+	bottom: 40px;
+}
+nav a.prev, nav a.next{opacity:0.07;}
+nav a.prev:hover, nav a.prev:focus, nav a.next:hover, nav a.next:focus{opacity:1;}
