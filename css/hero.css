@@ -2,20 +2,21 @@ body{
 }
 .hero-wide{
 	background: #FECA00;
-	min-height: 400px;
+	/*min-height: 400px;*/
 	max-height: 803px;
 }
 .hero-unit{
+	min-height: 197px;
 	text-align: center;
 }
 .hero-unit img{
-	height: 100%;
+	max-width: 100%;
 }
 
 /* vertical media queries */
 
 /*
-@media (min-height: 993px) { /* perfect hero unit + white space */
+@media (min-height: 920px) { /* perfect hero unit + white space */
 	/*.hero-wide, .hero-unit{
 		height: 803px;
 	}*/
