@@ -6,6 +6,68 @@
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
     <script src="/js/bootstrap.min.js"></script>
+    <script src="/js/jquery.fullPage.js"></script>
+
+    <script>
+
+    	$(document).ready(function() {
+
+    		$('.section section').hide();
+
+		    $.fn.fullpage({
+		    	verticalCentered: false,
+		    	resize: false,
+		    	easing: false,
+		    	css3: true,
+
+		    	afterLoad: function(anchorLink, index){
+		            //using index
+		            if(index == '2'){
+		                $('#portfolio-panel section').fadeIn(700);
+		            }
+		            if(index == '3'){
+		                $('#skills-panel section').fadeIn(700);
+		            }
+		            if(index == '4'){
+		                $('#testimonies-panel section').fadeIn(700);
+		            }
+		            if(index == '5'){
+		                $('#contact-panel section').fadeIn(700);
+		            }
+		        },
+
+		        onLeave: function(index, direction){
+		            //using index
+		            if(index == '2' && direction == 'down'){
+		                $('#portfolio-panel section').fadeOut(700);
+		            }
+		            if(index == '3' && direction == 'down'){
+		                $('#skills-panel section').fadeOut(700);
+		            }
+		            if(index == '4' && direction == 'down'){
+		                $('#testimonies-panel section').fadeOut(700);
+		            }
+		            if(index == '2' && direction == 'up'){
+		                $('#portfolio-panel section').fadeOut(700);
+		            }
+		            if(index == '3' && direction == 'up'){
+		                $('#skills-panel section').fadeOut(700);
+		            }
+		            if(index == '4' && direction == 'up'){
+		                $('#testimonies-panel section').fadeOut(700);
+		            }
+		            if(index == '5' && direction == 'down'){
+		                $('#contact-panel section').fadeOut(700);
+		            }
+		            if(index == '5' && direction == 'up'){
+		                $('#contact-panel section').fadeOut(700);
+		            }
+		        }
+
+		    });
+		});
+
+    </script>
 
   </body>
 </html>
