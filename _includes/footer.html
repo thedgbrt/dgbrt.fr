@@ -11,7 +11,11 @@
     ================================================== -->
     <script type="text/javascript" src="/js/skrollr.min.js"></script>
     <script type="text/javascript">
-    var s = skrollr.init();
+    $(document).ready( function(){
+        skrollr.init({ // only load skrollr when height of document is calculated
+            forceHeight : false
+        });
+    });
     </script>
   </div><!-- end skrollr body
   </body>
