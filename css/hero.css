@@ -13,11 +13,11 @@ body{
 	max-width: 100%;
 }
 
-/* vertical media queries */
+/* testing animations */
 
-/*
-@media (min-height: 920px) { /* perfect hero unit + white space */
-	/*.hero-wide, .hero-unit{
-		height: 803px;
-	}*/
-}*/
+.skrollable-before{
+	opacity:0!important;
+}
+.skrollable-between, .skrollable-after {
+	opacity:1 !important;
+}
