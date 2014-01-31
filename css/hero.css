@@ -1,23 +1,11 @@
-body{
-}
-.hero-wide{
-	background: #FECA00;
-	/*min-height: 400px;*/
-	max-height: 803px;
-}
-.hero-unit{
-	min-height: 197px;
-	text-align: center;
-}
-.hero-unit img{
-	max-width: 100%;
-}
-
 /* testing animations */
 
 .skrollable-before{
-	opacity:0!important;
+	visibility: hidden;
 }
-.skrollable-between, .skrollable-after {
-	opacity:1 !important;
+
+section section, header.main, footer.main{
+	width: 100%;
+	height: 700px;
+	border: 1px solid green;
 }
