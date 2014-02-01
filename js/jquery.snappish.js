@@ -21,6 +21,8 @@
     $main.addClass('snappish-main');
     $main.addClass("snappish-" + numberOfSlides + "-slides");
     $slides.addClass('snappish-slide');
+    $slides.css('opacity', 0);
+    $slides.eq(0).css('opacity', 1);
     scroll = function(direction) {
       var targetSlideNum;
       targetSlideNum = null;
@@ -50,7 +52,21 @@
         transitionDuration: transitionDuration
       };
       $wrapper.trigger('scrollbegin.snappish', eventData);
-      $main.css('transform', "translate3d(0," + targetScrollDistance + "%,0)");
+      $slides.eq(currentSlideNum).animate({
+        opacity: 0,
+      }, 1000, function() {
+        $main.css('transform', "translate3d(0," + targetScrollDistance + "%,0)");
+
+         setTimeout(function() {
+        $slides.eq(targetSlideNum).animate({
+            opacity: 1
+          }, 1000);
+      }, 1000);
+
+      });
+      
+
+
       currentSlideNum = targetSlideNum;
       setTimeout(function() {
         return $wrapper.trigger('scrollend.snappish', eventData);
