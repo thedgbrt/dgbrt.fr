@@ -1,4 +1,7 @@
-body{
+body, html{
+	width: 100%;
+height: 100%;
+overflow: hidden;
 }
 .hero-wide{
 	background: #FECA00;
@@ -20,4 +23,13 @@ body{
 	/*.hero-wide, .hero-unit{
 		height: 803px;
 	}*/
-}*/
+
+
+#wrapper{
+width: 100%;
+height: 100%;
+}
+
+.snappish-slide{
+	overflow: hidden;
+}
