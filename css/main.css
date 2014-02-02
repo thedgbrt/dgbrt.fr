@@ -1,3 +1,47 @@
+/*
+@yellow: #FFCE15;
+@black: #000;
+*/
+body, html{
+	height: 100%;
+}
 body{
+}
+
+/* navbar */
+.navbar{
+	background: none;
+	border: 0;
+}
+.navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus{
+	background: #fff;
+}
+.navbar-default .navbar-brand{
+	color: #000;
+}
+.navbar-default .navbar-toggle{
+	border: 0;
+}
+.navbar-toggle .icon-bar {
+	width: 30px;
+	height: 5px;
+	border-radius: 0px;
+}
+.navbar-default .navbar-toggle .icon-bar{
+	background: #000;
+	margin-top: 7px;
+}
+
+header.main, section.main, footer.main{
+	min-height: 100%;
+	width: 100%;
+}
+
+header.main{
 	padding-top: 70px;
+	background: #FFCE15;
+}
+
+.skills{
+	background: url("../images/patt-custom-4b.jpg");
 }
