@@ -2,7 +2,7 @@
 @yellow: #FFCE15;
 @black: #000;
 */
-body, html{
+body, html, .wrapper{
 	height: 100%;
 }
 body{
@@ -30,6 +30,32 @@ body{
 .navbar-default .navbar-toggle .icon-bar{
 	background: #000;
 	margin-top: 7px;
+}
+
+/* navbar offcanvas */
+/* credits http://blogs.telerik.com/kendoui/posts/13-11-05/creating-a-rwd-off-canvas-layout-with-bootstrap-3 */
+.row-offcanvas {
+	position: relative;
+	right: 0;
+	-webkit-transition: left .3s ease-in;
+	-most-transition: left .3s ease-in;
+	transition: left .3s ease-in;
+}
+
+/* sidebar */
+.sidebar-offcanvas {
+	right: -40%;
+	width: 40%;
+	position: absolute;
+	top: 0;
+	height: 100%;
+	background-color: #F7F7F7;
+	padding: 0px;
+}
+
+/* content */
+.row-offcanvas.active {
+	right: 40%;
 }
 
 header.main, section.main, footer.main{
