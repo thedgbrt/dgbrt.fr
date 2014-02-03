@@ -1,14 +1,32 @@
 
+    </div>
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
     <script src="/js/bootstrap.min.js"></script>
 
+    <!-- Skrollr -->
+    <script src="/js/skrollr.min.js"></script>
     <script>
+    
     $(document).ready(function(){
 		$("nav.main").hide();
         typeAdjustments();
+
+        var s = skrollr.init({
+            forceHeight: false,
+            render: function(data){
+                var topPos = data.curTop; // scroll position relative to top of window
+                var p1Height = $("header.home-panel").height(); // height of main panel
+                if(topPos > p1Height){
+                    $("header.main").addClass("ontop");
+                }
+                else{
+                    $("header.main").removeClass("ontop");
+                }
+            } 
+        });
     });
 
     $(window).resize(function(){
