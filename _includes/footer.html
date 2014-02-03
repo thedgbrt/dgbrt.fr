@@ -6,9 +6,24 @@
     <script src="/js/bootstrap.min.js"></script>
 
     <script>
-    $(document).ready( function(){
-		
+    $(document).ready(function(){
+		$("nav.main").hide();
+        typeAdjustments();
     });
+
+    $(window).resize(function(){
+        typeAdjustments();
+    });
+
+    function typeAdjustments(){
+        var goldenRatio = 1.61803398875
+        
+        // main heading position
+        var p1Height = $("header.home-panel").height();
+        var p1TopPadding = p1Height / Math.pow(goldenRatio,3); // applying golden ratio top padding
+        $("header.home-panel h1").css('margin-top', p1TopPadding);
+        console.log(p1TopPadding);
+    }
     </script>
   </body>
 </html>

@@ -1,65 +1,159 @@
 /*
-@yellow: #FFCE15;
+@yellow: #FFCB04;
 @black: #000;
 */
 body, html{
 	height: 100%;
 }
 body{
+	color: #000;
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 300;
+	font-size: 16px;
+	min-width: 320px;
+	min-height: 360px;
 }
 
-/* navbar */
-.navbar{
-	background: none;
-	border: 0;
+/* logo + navbar */
+header.main{
+	position: fixed;
+	width: 100%;
+	min-width: 320px;
+	vertical-align: middle;
+	height: auto;
+	text-align: justify;
 }
-.navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus{
-	background: #fff;
+.logo, .nav-icon-wrapper{ /* need this to align menu and logo vertically at all sizes */
+	width: 50%;
+	display: inline-block;
+	/* IE 7 hack */
+	*zoom:1;
+	*display: inline;
+	vertical-align: middle;
 }
-.navbar-default .navbar-brand{
+.nav-icon-wrapper{
+	text-align: right;
+}
+#logo{
 	color: #000;
-}
-.navbar-default .navbar-toggle{
-	border: 0;
+	background: url('../images/logo.svg') no-repeat;
+	width: 4.125em;
+	height: 4.125em;
+	text-indent: -9999px;
+	background-size: contain;
 	display: block;
 }
-.navbar-toggle .icon-bar {
-	width: 30px;
-	height: 5px;
-	border-radius: 0px;
+
+.nav-toggle{
+	vertical-align: middle;
+	padding-top: 0.438em;
+	text-align: right;
+	vertical-align: middle;
 }
-.navbar-default .navbar-toggle .icon-bar{
+.nav-toggle:hover{
+	background: #FFCB04;
+}
+
+.nav-toggle .nav-label {
+	text-transform: uppercase;
+	font-weight: 600;
+	padding-right: 1em;
+	color: #000;
+	font-size: 0.875em;
+}
+.nav-toggle .nav-label, .nav-toggle .nav-icon{
+	display: inline-block;
+	vertical-align: middle;
+}
+.nav-toggle .icon-bar {
+	width: 1.375em;
+	height: 0.25em;
+	border-radius: 0;
 	background: #000;
-	margin-top: 7px;
+	margin: 0;
+	margin-bottom: 0.25em;
+	padding: 0;
+	display: block;
+}
+/* type */
+
+h1, h2, h3, h4, h5, h6{
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 800;
+}
+h1{
+	text-transform: uppercase;
+	font-size: 4em;
+	font-weight: normal;
+}
+h2{
+	font-size: 1.6em;
 }
 
-.navbar .navbar-collapse {
-  position: fixed;
-  z-index: -1;
-  opacity: 0;
-  width: 100%;
-  height: 100%;
-  left: 0px;
-  top: 0px;
-  background: rgba(255,255,255,0.9);
+header > p{ /* sub headlines */
+	font-size: 1.238em;
 }
 
-.navbar .navbar-collapse.in {
- opacity: 1; 
-  z-index: 400;
-  height: 100% !important; /*overriding bootstrap js styling on toggle*/
-}
+/* home-panels */
 
-header.main, section.main, footer.main{
+header.home-panel, section.home-panel, footer.home-panel{
 	min-height: 100%;
 	width: 100%;
+	text-align: center;
 }
 
-header.main{
-	padding-top: 70px;
-	background: #FFCE15;
+header.home-panel{
+	background: url("../images/homepage-main-bg.jpg") center center no-repeat #FFCB04;
+	background-size: contain;
+}
+
+header.home-panel > p{ /* sub headline */
+	font-size: 1.6em;
+	margin-top: 0.5em;
+}
+
+header.home-panel h1{
+	margin-top: 0.85em;
+}
+
+section.home-panel header > h2{
+	margin-top: 1.6em;
 }
 
 .skills{
 	background: url("../images/patt-custom-4b.jpg");
+}
+
+
+@media (min-width: 768px) {
+  
+	.navbar-default .navbar-toggle{
+	}
+
+	.navbar-toggle .nav-label {
+	}
+	header.home-panel > p{
+		font-size: 2.286em;
+	}
+	h1{
+		font-size: 6.9em;
+	}
+	h2{
+		font-size: 2.1em;
+	}
+}
+
+@media (min-width: 992px) {
+	body{
+		font-size: 18px;
+	}
+	.navbar-toggle .nav-label {
+	}
+
+}
+
+@media (min-width: 1200px) {
+	body{
+		font-size: 21px;
+	}
 }
