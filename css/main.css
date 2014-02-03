@@ -162,7 +162,13 @@ section.home-panel header > h2{
 }
 
 .skills{
-	background: url("../images/patt-custom-4b.jpg");
+	background: url("../images/patt-custom-4b.jpg") repeat fixed;
+}
+
+.skills ul{
+	list-style-type: none;
+	list-style-position: outside;
+	padding-left: 0;
 }
 
 

@@ -1,5 +1,4 @@
 
-    </div>
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
@@ -18,7 +17,7 @@
     });
 
     $(window).scroll(function() {
-        
+
         var topPos = $(window).scrollTop(); // scroll position relative to top of window
         var p1Height = $("header.home-panel").height(); // height of main panel
         if(topPos > p1Height){
@@ -32,11 +31,19 @@
     function typeAdjustments(){
         var goldenRatio = 1.61803398875
         
-        // main heading position
+        // main panel position
         var p1Height = $("header.home-panel").height();
         var p1TopPadding = p1Height / Math.pow(goldenRatio,3); // applying golden ratio top padding
         $("header.home-panel h1").css('margin-top', p1TopPadding);
-        console.log(p1TopPadding);
+
+        // other panels
+        $(".home-panel").each( function(index, element){
+            if(index > 0){ // avoids the first panel above
+                var pHeight = $(this).height();
+                var pTopPadding = pHeight / Math.pow(goldenRatio, 4);
+                $(this).children("header").children("h2").css('margin-top', pTopPadding);
+            }
+        });
     }
     </script>
   </body>
