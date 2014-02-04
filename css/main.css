@@ -144,6 +144,34 @@ header > p{ /* sub headlines */
 	font-size: 1.238em;
 }
 
+/* buttons */
+
+button{
+	font-size: 1.143em;
+	font-weight: 300;
+	background-color: rgba(255, 206, 21, 0.85);
+	border: 2px solid rgba(255, 206, 21, 0.85);
+	padding: 1.3em 1.25em;
+	-webkit-border-radius: 12px;
+	-moz-border-radius: 12px;
+	border-radius: 12px;
+	-webkit-transition: all 250ms;
+    -moz-transition: all 250ms;
+    -o-transition: all 250ms;
+    transition: all 250ms;
+}
+
+header.home-panel button{
+	background-color: rgba(255, 206, 21, 0.5);
+	border-color: #000;
+	top: 0;
+}
+
+header.home-panel button:hover, header.home-panel button:focus{
+	background-color: rgba(255, 255, 255, 0.85);
+	border-color: rgba(255, 255, 255, 0.85);
+}
+
 /* home-panels */
 
 header.home-panel, section.home-panel, footer.home-panel{
@@ -157,8 +185,8 @@ header.home-panel{
 	background-size: contain;
 }
 
-header.home-panel > p{ /* sub headline */
-	font-size: 1.6em;
+header.home-panel .container > p{ /* sub headline */
+	font-size: 1.5em;
 	margin-top: 0.5em;
 }
 
@@ -190,7 +218,7 @@ section.home-panel header > h2{
 		width: 5em;
 	}
 
-	header.home-panel > p{
+	header.home-panel .container > p{
 		font-size: 2.286em;
 	}
 	h1{
@@ -209,10 +237,16 @@ section.home-panel header > h2{
 	.navbar-toggle .nav-label {
 	}
 
+	header.home-panel button{
+		font-size: 1.714em;
+		margin-top: 2em;
+	}
+
 }
 
 @media (min-width: 1200px) {
 	body{
 		font-size: 21px;
 	}
+
 }
