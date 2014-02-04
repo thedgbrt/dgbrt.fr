@@ -18,13 +18,19 @@
 
     $(window).scroll(function() {
 
-        var topPos = $(window).scrollTop(); // scroll position relative to top of window
+        var topWin = $(window).scrollTop();
+        var bottomWin = $(window).scrollTop() + $(window).height();
+        var bottomDoc = $(document).height();
         var p1Height = $("header.home-panel").height(); // height of main panel
-        if(topPos > p1Height){
-            $("header.main").addClass("ontop");
+        console.log(bottomWin + " " + bottomDoc);
+
+        if(bottomWin >= bottomDoc - 100){
+            $("header.main").removeClass("bounceOutUp");
+            $("header.main").addClass("ontop bounceInDown animated");
         }
-        else{
-            $("header.main").removeClass("ontop");
+        if(topWin < p1Height/2){
+            $("header.main").removeClass("bounceInDown");
+            $("header.main").addClass("bounceOutUp");
         }
     });
 
@@ -41,7 +47,7 @@
             if(index > 0){ // avoids the first panel above
                 var pHeight = $(this).height();
                 var pTopPadding = pHeight / Math.pow(goldenRatio, 4);
-                $(this).children("header").children("h2").css('margin-top', pTopPadding);
+                $(this).children(".container").children("header").children("h2").css('margin-top', pTopPadding);
             }
         });
     }

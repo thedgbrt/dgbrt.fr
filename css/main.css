@@ -18,7 +18,7 @@ body{
 header.main{
 	width: 100%;
 	min-width: 320px;
-	position: fixed;
+	position: absolute;
 	vertical-align: middle;
 	height: auto;
 	text-align: justify;
@@ -28,6 +28,7 @@ header.main{
     -o-transition: all 250ms;
     transition: all 250ms;
 }
+
 header.main.ontop{
 	/*border-top: 0.2em solid #FFCB04;*/
 	position: fixed;
@@ -42,7 +43,7 @@ header.main.ontop .bg-overlay{
 	position: absolute;
 	z-index: -1;
 	background: #fff;
-	/*opacity: 0.9;*/
+	opacity: 0.9;
 }
 
 .logo, .nav-icon-wrapper{ /* need this to align menu and logo vertically at all sizes */
@@ -65,13 +66,9 @@ header.main.ontop .bg-overlay{
 	text-indent: -9999px;
 	background-size: contain;
 	display: block;
-	width: 2.75em;
-	height: 2.75em;
+	width: 3.75em;
+	height: 3.75em;
 	margin-left: 1em;
-	-webkit-transition: all 250ms;
-    -moz-transition: all 250ms;
-    -o-transition: all 250ms;
-    transition: all 250ms;
 }
 .nav-toggle{
 	vertical-align: middle;
@@ -93,10 +90,7 @@ header.main.ontop .bg-overlay{
 .nav-toggle:hover{
 	text-decoration:none;
 	color: #000;
-}
-header.main.ontop .nav-toggle:hover{
-	border-color: #FFCB04;
-	background-color: #fff;
+	border-color: #000;
 }
 
 .nav-toggle .nav-label {
@@ -120,6 +114,17 @@ header.main.ontop .nav-toggle:hover{
 	padding: 0;
 	display: block;
 }
+
+header.main.ontop #logo{
+	height: 2.75em;
+	width: 2.75em;
+}
+
+header.main.ontop .nav-toggle:hover{
+	border-color: #FFCB04;
+	background-color: #fff;
+}
+
 /* type */
 
 h1, h2, h3, h4, h5, h6{
@@ -148,7 +153,7 @@ header.home-panel, section.home-panel, footer.home-panel{
 }
 
 header.home-panel{
-	background: url("../images/homepage-main-bg.jpg") center center no-repeat #FFCB04;
+	background: url("../images/homepage-main-bg.jpg") center center no-repeat #FFCB04 fixed;
 	background-size: contain;
 }
 
@@ -177,12 +182,14 @@ section.home-panel header > h2{
 
 
 @media (min-width: 768px) {
-  
-	.navbar-default .navbar-toggle{
+ 	body{
+		font-size: 18px;
+	}
+	#logo{
+		height: 5em;
+		width: 5em;
 	}
 
-	.navbar-toggle .nav-label {
-	}
 	header.home-panel > p{
 		font-size: 2.286em;
 	}
@@ -195,9 +202,10 @@ section.home-panel header > h2{
 }
 
 @media (min-width: 992px) {
-	body{
+	/*body{
 		font-size: 18px;
-	}
+	}*/
+	
 	.navbar-toggle .nav-label {
 	}
 
