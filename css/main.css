@@ -162,9 +162,9 @@ button{
 }
 
 header.home-panel button{
-	background-color: rgba(255, 206, 21, 0.5);
+	background-color: rgba(255, 206, 21, 0.85);
 	border-color: #000;
-	top: 0;
+	margin-top: 2em;
 }
 
 header.home-panel button:hover, header.home-panel button:focus{
@@ -187,7 +187,6 @@ header.home-panel{
 
 header.home-panel .container > p{ /* sub headline */
 	font-size: 1.5em;
-	margin-top: 0.5em;
 }
 
 header.home-panel h1{
@@ -213,19 +212,12 @@ section.home-panel header > h2{
  	body{
 		font-size: 18px;
 	}
+	h1{
+		font-size: 4.9em;
+	}
 	#logo{
 		height: 5em;
 		width: 5em;
-	}
-
-	header.home-panel .container > p{
-		font-size: 2.286em;
-	}
-	h1{
-		font-size: 6.9em;
-	}
-	h2{
-		font-size: 2.1em;
 	}
 }
 
@@ -237,9 +229,19 @@ section.home-panel header > h2{
 	.navbar-toggle .nav-label {
 	}
 
+	h1{
+		font-size: 6.5em;
+	}
+	h2{
+		font-size: 2.1em;
+	}
+
+	header.home-panel .container > p{
+		font-size: 2.286em;
+	}
+
 	header.home-panel button{
 		font-size: 1.714em;
-		margin-top: 2em;
 	}
 
 }
@@ -247,6 +249,9 @@ section.home-panel header > h2{
 @media (min-width: 1200px) {
 	body{
 		font-size: 21px;
+	}
+	h1{
+		font-size: 6.9em;
 	}
 
 }
