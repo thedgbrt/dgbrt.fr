@@ -45,3 +45,36 @@ Avec design sur mesure: À partir de 3500€
 
 
 * Tous les packs proposés comprennent un design "responsive" qui s'adapte à toutes les tailles d'écrans (ordinateur de bureau, tablette, smartphone).
+
+
+***
+
+More content:
+
+
+Création d'un site prestashop sur-mesure.
+Design + intégration d'un template responsive sur mesure. Configuration des modules par défault et mise en ligne.
+3500€-5500€
+
+exemples de réalisation:
+http://www.wipiz.com
+https://www.behance.net/gallery/JujuetCompagniefr-Design-of-a-wall-stickers-store/7857581
+https://www.behance.net/gallery/Dealvox-Website-Design-of-Prestashop-Template/14215769
+
+
+Création d'un site prestashop à partir d'un theme existant.
+Installation, configuration de la boutique. Installation et configuration du thème. 1 journée de personnalisation du thème pour s'accorder avec l'identité visuelle de l'entreprise.
+1500€-2500€
+
+exemple de realisation: www.simplechic.com
+
+
+Création d'un site wordpress sur mesure.
+Design + intégration d'un template responsive sur mesure. Configuration du site, des pages et mise en ligne.
+2500€-3500€
+
+
+Création d'un site wordpress à partir d'un thème existant.
+Installation d'un site wordpress, configuration du thème. 1 journée de personnalisation du thème pour s'accorder avec l'identité visuelle de l'entreprise.
+800-1500€
+exemple de réalisation: http://www.docteurleclercq.fr/
