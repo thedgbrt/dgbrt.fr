@@ -18,10 +18,9 @@
                 $("#skrollr-pos").html(topPos);
             }
         });
-        setTimeout(function(){s.refresh()}, 2000);
     });
 
-    $(window).resize(function(){
+    $(window).bind("resize", function(){
         typeAdjustments();
     });
 
@@ -53,6 +52,7 @@
 
         // other panels
         $(".home-panel").each( function(index, element){
+            $(this).height($(window).height());
             if(index > 0){ // avoids the first panel above
                 var pHeight = $(this).height();
                 var pTopPadding = pHeight / Math.pow(goldenRatio, 4);
