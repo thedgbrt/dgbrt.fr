@@ -11,7 +11,7 @@ body{
 	font-weight: 300;
 	font-size: 16px;
 	min-width: 320px;
-	min-height: 360px;
+	/*min-height: 360px;*/
 }
 
 /* logo + navbar */
@@ -175,7 +175,7 @@ header.home-panel button:hover, header.home-panel button:focus{
 /* home-panels */
 
 header.home-panel, section.home-panel, footer.home-panel{
-	min-height: 100%;
+	/*min-height: 100%;*/
 	width: 100%;
 	text-align: center;
 }

@@ -11,7 +11,14 @@
     $(document).ready(function(){
 		$("nav.main").hide();
         typeAdjustments();
-        var s = skrollr.init();
+        var s = skrollr.init({
+            forceHeight:false,
+            render: function(data) {
+                topPos = data.curTop; // get window top position at any given time, even on mobile thanks to skrollr
+                $("#skrollr-pos").html(topPos);
+            }
+        });
+        setTimeout(function(){s.refresh()}, 2000);
     });
 
     $(window).resize(function(){
