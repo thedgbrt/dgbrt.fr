@@ -1,16 +1,17 @@
-
+    </div>
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
     <script src="/js/bootstrap.min.js"></script>
-    <script src="/js/jquery.fittext.js"></script>
+    <script src="/js/skrollr.min.js"></script>
 
     <script>
     
     $(document).ready(function(){
 		$("nav.main").hide();
         typeAdjustments();
+        var s = skrollr.init();
     });
 
     $(window).resize(function(){
@@ -33,10 +34,6 @@
                 $("header.main").removeClass("ontop bounceInDown animated");
             }
         }
-        // if(topWin < p1Height/2){
-        //     $("header.main").removeClass("bounceInDown");
-        //     $("header.main").addClass("bounceOutUp");
-        // }
     });
 
     function typeAdjustments(){
@@ -55,8 +52,6 @@
                 $(this).children(".container").children("header").children("h2").css('margin-top', pTopPadding);
             }
         });
-
-        $("#big-headline").fittext();
     }
     </script>
   </body>

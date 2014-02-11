@@ -2,7 +2,7 @@
 @yellow: #FFCB04;
 @black: #000;
 */
-body, html{
+body, html, #skrollr-body{
 	height: 100%;
 }
 body{
