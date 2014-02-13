@@ -8,7 +8,7 @@ body, html{
 body{
 	color: #000;
 	font-family: 'Open Sans', sans-serif;
-	font-weight: 300;
+	font-weight: 200;
 	font-size: 18px;
 	min-width: 320px;
 	min-height: 360px;
@@ -47,17 +47,20 @@ header.main.ontop .bg-overlay{
 }
 
 .logo, .nav-icon-wrapper{ /* need this to align menu and logo vertically at all sizes */
-	margin: 1.6em 0 1em 0;
-	width: 50%;
+	margin: 0;
+	width: 75%;
 	display: inline-block;
 	/* IE 7 hack */
 	*zoom:1;
 	*display: inline;
 	vertical-align: middle;
 	font-size: 0.778em; /*14px */
+	font-weight:400;
+    padding-top:1em;
 }
 .nav-icon-wrapper{
 	text-align: right;
+	width:25%;
 }
 .logo a{
 	color: #000;
@@ -73,21 +76,20 @@ header.main.ontop .bg-overlay{
 	display: block;
 	width: 2.75em;
 	height: 2.75em;
-	margin: 0 1em 0 2em;
+	margin: 0 1em 0 1em;
 	float: left;
 }
 .nav-toggle{
 	vertical-align: middle;
-	padding-top: 0.438em;
 	text-align: right;
 	vertical-align: middle;
 	font-size: 1em;
 	margin-right: 1em;
-	padding: 0.6em 1em 0.7em 1em;
+	padding: 0.6em;
 	-webkit-border-radius: 8px;
 	-moz-border-radius: 8px;
 	border-radius: 8px;
-	border: 2px solid transparent;
+	border: 1px solid rgba(0, 0, 0, 0.33);
 	-webkit-transition: all 250ms;
     -moz-transition: all 250ms;
     -o-transition: all 250ms;
@@ -208,7 +210,7 @@ section.home-panel header > h2{
 }
 
 .skills{
-	background: url("../images/patt-custom-4b.jpg") repeat fixed;
+	/*background: url("../images/patt-custom-4c.jpg") repeat fixed;*/
 }
 
 .skills ul{
@@ -219,7 +221,8 @@ section.home-panel header > h2{
 
 /* sub pages */
 .jumbotron{
-	padding:6em 0 0 0;
+	padding:3em 0 0 0;
+	background: #fff;
 }
 .jumbotron h1{
 	font-size: 2.2em;
@@ -229,51 +232,53 @@ section.home-panel header > h2{
 }
 
 .jumbotron.skills{
-	height: 100%;
-	overflow:hidden;
-	position:relative;
+	min-height: 100%;
+}
+.jumbotron .nav{
+}
+.jumbotron .nav .btn:first-child{
 }
 
-.jumbotron.skills .nav{
-	vertical-align: middle;
-	height: auto;
-	text-align: justify;
-	position:absolute;
-	bottom:0;
-	width: 100%;
-}
-
-.jumbotron.skills .nav p{
-	width: 50%;
-	margin:0;
-	display: inline-block;
-	/* IE 7 hack */
-	*zoom:1;
-	*display: inline;
-	vertical-align: middle;
-	
-}
-.jumbotron.skills .nav p a{
+.btn{
+	font-weight:200;
 	color: #000;
-	text-decoration:none;
-	background: rgba(255, 255, 255, 0.85);
-	height: 3em;
-	text-align:center;
-	display:block;
+	-webkit-transition: all 250ms;
+    -moz-transition: all 250ms;
+    -o-transition: all 250ms;
+    transition: all 250ms;
+}
+.btn-default{
+	background-color: rgba(255, 255, 255, 0.85);
+	border: 1px solid rgba(0, 0, 0, 0.33);
+}
+.btn-default:hover, .btn-default:focus{
+	background-color: rgba(255, 255, 255, 0.85);
+	border: 1px solid rgba(255, 203, 4, 0.85);
+	color: rgba(255, 203, 4, 0.85);
+}
+.btn-primary{
+	background-color: rgba(255, 203, 4, 0.85);
+	border: 0;
+}
+.btn-primary:hover, .btn-primary:focus{
+	background: rgba(0, 0, 0, 0.85);
+	color: #FFCB04;
 }
 
-.jumbotron.skills .nav p:first-child a{
-	background: rgba(255, 203, 4, 0.85);
+
+@media (max-width: 767px) { /*hide some elements on mobile*/
+ 	
 }
-
-
 @media (min-width: 768px) {
  	body{
 		font-size: 21px;
 	}
-	/*h1{
-		font-size: 4.9em;
-	}*/
+	.jumbotron{
+		padding-top:5em;
+	}
+	h1, .jumbotron h1{
+		font-size:3.429em;
+	}
 	/*#logo{
 		height: 5em;
 		width: 5em;
