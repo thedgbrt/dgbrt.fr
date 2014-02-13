@@ -250,31 +250,60 @@ section.home-panel header > h2{
 .btn-default{
 	background-color: rgba(255, 255, 255, 0.85);
 	border: 1px solid rgba(0, 0, 0, 0.33);
+	font-weight:200;
 }
 .btn-default:hover, .btn-default:focus{
 	background-color: rgba(255, 255, 255, 0.85);
 	border: 1px solid rgba(255, 203, 4, 0.85);
 	color: rgba(255, 203, 4, 0.85);
+	font-weight:200;
 }
 .btn-primary{
 	background-color: rgba(255, 203, 4, 0.85);
 	border: 0;
+	font-weight:200;
 }
 .btn-primary:hover, .btn-primary:focus{
 	background: rgba(0, 0, 0, 0.85);
 	color: #FFCB04;
+	font-weight:200;
 }
 
+/* vertical media queries */
+@media (min-height: 480px) {
+	.jumbotron{
+		padding-top:5em;
+	}
+	.jumbotron .nav{
+		margin-top: 1.6em;
+	}	
+}
+@media (min-height: 800px) {
+	.jumbotron{
+		padding-top:8em;
+	}
+	.jumbotron .nav{
+		margin-top: 2.6em;
+	}	
+}
 
+/* horizontal media queries */
 @media (max-width: 767px) { /*hide some elements on mobile*/
  	
 }
-@media (min-width: 768px) {
+
+@media (min-width: 480px) {
  	body{
 		font-size: 21px;
 	}
-	.jumbotron{
-		padding-top:5em;
+	h1, .jumbotron h1{
+		font-size:2.857em;
+	}
+}
+
+@media (min-width: 768px) {
+ 	body{
+		font-size: 24px;
 	}
 	h1, .jumbotron h1{
 		font-size:3.429em;
