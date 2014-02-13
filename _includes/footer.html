@@ -26,15 +26,16 @@
         var bottomDoc = $(document).height();
         var p1Height = $("header.home-panel").height(); // height of main panel
 
-        if(bottomWin >= bottomDoc - 100){
-            // $("header.main").removeClass("bounceOutUp");
-            $("header.main").addClass("ontop bounceInDown animated");
-        }
-        if($("header.main").hasClass("ontop")){
-            if(topWin <= 100){
-                $("header.main").removeClass("ontop bounceInDown animated");
-            }
-        }
+        
+        // if(bottomWin >= bottomDoc - 100){
+        //     // $("header.main").removeClass("bounceOutUp");
+        //     $("header.main").addClass("ontop bounceInDown animated");
+        // }
+        // if($("header.main").hasClass("ontop")){
+        //     if(topWin <= 100){
+        //         $("header.main").removeClass("ontop bounceInDown animated");
+        //     }
+        // }
         // if(topWin < p1Height/2){
         //     $("header.main").removeClass("bounceInDown");
         //     $("header.main").addClass("bounceOutUp");
