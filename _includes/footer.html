@@ -5,7 +5,7 @@
     <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
     <script src="/js/bootstrap.min.js"></script>
     <script src="/js/holder.js"></script>
-    <script src="/js/jquery.fittext.js"></script>
+    <script src="/js/jquery.equalheights.js"></script>
 
     <script>
     
@@ -16,6 +16,11 @@
 
     $(window).resize(function(){
         typeAdjustments();
+        thumbnailsAdjustments();
+    });
+
+    $(window).load( function(){
+        thumbnailsAdjustments();
     });
 
     $(window).scroll(function() {
@@ -24,7 +29,6 @@
         var bottomWin = $(window).scrollTop() + $(window).height();
         var bottomDoc = $(document).height();
         var p1Height = $("header.home-panel").height(); // height of main panel
-
         
         // if(bottomWin >= bottomDoc - 100){
         //     // $("header.main").removeClass("bounceOutUp");
@@ -57,8 +61,12 @@
                 $(this).children(".container").children("header").children("h2").css('margin-top', pTopPadding);
             }
         });
+    }
 
-        $("#big-headline").fittext();
+    function thumbnailsAdjustments(){
+        $('#portfolio .thumbnail').height('auto');
+        if(($(window).width()) > 760)
+            $('#portfolio .thumbnail').equalHeights();
     }
     </script>
   </body>
