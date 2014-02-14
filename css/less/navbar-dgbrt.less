@@ -152,11 +152,11 @@
 
 .navbar-brand {
   float: left;
-  padding: @navbar-padding-vertical @navbar-padding-horizontal;
+  // padding: @navbar-padding-vertical @navbar-padding-horizontal;
   // font-size: @font-size-large;
   line-height: @line-height-computed;
   height: @line-height-computed;
-
+  .navbar-vertical-align(34px);
   &:hover,
   &:focus {
     text-decoration: none;
@@ -172,6 +172,25 @@
     }
   }
 }
+
+// Navbar logo (custom dgbrt)
+//
+
+/* header logo */
+.logo-img{
+  background: url('../images/logo.svg') no-repeat;
+  /*text-indent: -9999px;*/
+  background-size: contain;
+  display: block;
+  width: 34px;
+  height: 34px;
+  float: left;
+  margin: 0 @navbar-padding-horizontal;
+}
+.logo-label{
+  display: inline-block;
+}
+
 
 
 // Navbar toggle
@@ -266,7 +285,7 @@
     }
 
     &.navbar-right:last-child {
-      margin-right: -@navbar-padding-horizontal;
+      margin-right: @navbar-padding-horizontal;
     }
   }
 }
@@ -430,6 +449,7 @@
     &:hover,
     &:focus {
       background-color: @navbar-default-toggle-hover-bg;
+      border-color: @navbar-default-toggle-hover-border-color;
     }
     .icon-bar {
       background-color: @navbar-default-toggle-icon-bar-bg;
@@ -454,6 +474,9 @@
     }
 
     @media (max-width: @grid-float-breakpoint-max) {
+      > li > a {
+        text-decoration: underline;
+      }
       // Dropdowns get custom display when collapsed
       .open .dropdown-menu {
         > li > a {
