@@ -1,0 +1,350 @@
+/*
+@yellow: #FFCB04;
+@black: #000;
+*/
+body, html{
+	height: 100%;
+}
+body{
+	color: #000;
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 200;
+	font-size: 18px;
+	min-width: 320px;
+	min-height: 360px;
+}
+
+/* logo + navbar */
+header.main{
+	width: 100%;
+	min-width: 320px;
+	position: absolute;
+	vertical-align: middle;
+	height: auto;
+	text-align: justify;
+	z-index: 99999;
+	-webkit-transition: all 250ms;
+    -moz-transition: all 250ms;
+    -o-transition: all 250ms;
+    transition: all 250ms;
+}
+
+header.main.ontop{
+	/*border-top: 0.2em solid #FFCB04;*/
+	position: fixed;
+	-webkit-transition: all 250ms;
+    -moz-transition: all 250ms;
+    -o-transition: all 250ms;
+    transition: all 250ms;
+}
+header.main.ontop .bg-overlay{
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	z-index: -1;
+	background: #fff;
+	opacity: 0.9;
+}
+
+.logo, .nav-icon-wrapper{ /* need this to align menu and logo vertically at all sizes */
+	margin: 0;
+	width: 75%;
+	display: inline-block;
+	/* IE 7 hack */
+	*zoom:1;
+	*display: inline;
+	vertical-align: middle;
+	font-size: 0.778em; /*14px */
+	font-weight:400;
+    padding-top:1em;
+}
+.nav-icon-wrapper{
+	text-align: right;
+	width:25%;
+}
+.logo a{
+	color: #000;
+	text-decoration:none;
+}
+.logo-img{
+	color: #000;
+	background: url('../images/logo.svg') no-repeat;
+	width: 0em;
+	height: 0em;
+	/*text-indent: -9999px;*/
+	background-size: contain;
+	display: block;
+	width: 2.75em;
+	height: 2.75em;
+	margin: 0 1em 0 1em;
+	float: left;
+}
+.nav-toggle{
+	vertical-align: middle;
+	text-align: right;
+	vertical-align: middle;
+	font-size: 1em;
+	margin-right: 1em;
+	padding: 0.6em;
+	-webkit-border-radius: 8px;
+	-moz-border-radius: 8px;
+	border-radius: 8px;
+	border: 1px solid rgba(0, 0, 0, 0.33);
+	-webkit-transition: all 250ms;
+    -moz-transition: all 250ms;
+    -o-transition: all 250ms;
+    transition: all 250ms;
+}
+.nav-toggle:hover{
+	text-decoration:none;
+	color: #000;
+	border-color: #000;
+}
+
+.nav-toggle .nav-label {
+	text-transform: uppercase;
+	font-weight: 600;
+	padding-right: 1em;
+	color: #000;
+	font-size: 0.875em;
+}
+.nav-toggle .nav-label, .nav-toggle .nav-icon{
+	display: inline-block;
+	vertical-align: middle;
+}
+.nav-toggle .icon-bar {
+	width: 1.375em;
+	height: 0.25em;
+	border-radius: 0;
+	background: #000;
+	margin: 0;
+	margin-bottom: 0.25em;
+	padding: 0;
+	display: block;
+}
+
+header.main.ontop #logo{
+	height: 2.75em;
+	width: 2.75em;
+}
+
+header.main.ontop .nav-toggle:hover{
+	border-color: #FFCB04;
+	background-color: #fff;
+}
+
+/* type */
+
+h1, h2, h3, h4, h5, h6{
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 800;
+}
+h1{
+	font-size: 2.2em;
+	font-weight: 700;
+}
+h2{
+	font-size: 1.6em;
+	margin-top: 2em;
+}
+h3{
+	font-size: 1em;
+	margin-top: 1em;
+}
+
+header > p{ /* sub headlines */
+	font-size: 1.238em;
+}
+
+/* buttons */
+
+button{
+	font-size: 1.143em;
+	font-weight: 300;
+	background-color: rgba(255, 206, 21, 0.85);
+	border: 2px solid rgba(255, 206, 21, 0.85);
+	padding: 1.3em 1.25em;
+	-webkit-border-radius: 12px;
+	-moz-border-radius: 12px;
+	border-radius: 12px;
+	-webkit-transition: all 250ms;
+    -moz-transition: all 250ms;
+    -o-transition: all 250ms;
+    transition: all 250ms;
+}
+
+header.home-panel button{
+	background-color: rgba(255, 206, 21, 0.85);
+	border-color: #000;
+	margin-top: 2em;
+}
+
+header.home-panel button:hover, header.home-panel button:focus{
+	background-color: rgba(255, 255, 255, 0.85);
+	border-color: rgba(255, 255, 255, 0.85);
+}
+
+/* home-panels */
+
+header.home-panel, section.home-panel, footer.home-panel{
+	min-height: 100%;
+	width: 100%;
+	text-align: center;
+}
+
+header.home-panel{
+	background: url("../images/homepage-main-bg.jpg") center center no-repeat #FFCB04 fixed;
+	background-size: contain;
+}
+
+header.home-panel .container > p{ /* sub headline */
+	font-size: 1.5em;
+}
+
+header.home-panel h1{
+	margin-top: 0.85em;
+}
+
+section.home-panel header > h2{
+	margin-top: 1.6em;
+}
+
+.skills{
+	/*background: url("../images/patt-custom-4c.jpg") repeat fixed;*/
+}
+
+.skills ul{
+	list-style-type: none;
+	list-style-position: outside;
+	padding-left: 0;
+}
+
+/* sub pages */
+.jumbotron{
+	padding:3em 0 0 0;
+	background: #fff;
+}
+.jumbotron h1{
+	font-size: 2.2em;
+}
+.jumbotron p{
+	font-size: inherit;
+}
+
+.jumbotron.skills{
+	min-height: 100%;
+}
+.jumbotron .nav{
+}
+.jumbotron .nav .btn:first-child{
+}
+
+.btn{
+	font-weight:200;
+	color: #000;
+	-webkit-transition: all 250ms;
+    -moz-transition: all 250ms;
+    -o-transition: all 250ms;
+    transition: all 250ms;
+}
+.btn-default{
+	background-color: rgba(255, 255, 255, 0.85);
+	border: 1px solid rgba(0, 0, 0, 0.33);
+	font-weight:200;
+}
+.btn-default:hover, .btn-default:focus{
+	background-color: rgba(255, 255, 255, 0.85);
+	border: 1px solid rgba(255, 203, 4, 0.85);
+	color: rgba(255, 203, 4, 0.85);
+	font-weight:200;
+}
+.btn-primary{
+	background-color: rgba(255, 203, 4, 0.85);
+	border: 0;
+	font-weight:200;
+}
+.btn-primary:hover, .btn-primary:focus{
+	background: rgba(0, 0, 0, 0.85);
+	color: #FFCB04;
+	font-weight:200;
+}
+
+/* vertical media queries */
+@media (min-height: 480px) {
+	.jumbotron{
+		padding-top:5em;
+	}
+	.jumbotron .nav{
+		margin-top: 1.6em;
+	}	
+}
+@media (min-height: 800px) {
+	.jumbotron{
+		padding-top:8em;
+	}
+	.jumbotron .nav{
+		margin-top: 2.6em;
+	}	
+}
+
+/* horizontal media queries */
+@media (max-width: 767px) { /*hide some elements on mobile*/
+ 	
+}
+
+@media (min-width: 480px) {
+ 	body{
+		font-size: 21px;
+	}
+	h1, .jumbotron h1{
+		font-size:2.857em;
+	}
+}
+
+@media (min-width: 768px) {
+ 	body{
+		font-size: 24px;
+	}
+	h1, .jumbotron h1{
+		font-size:3.429em;
+	}
+	/*#logo{
+		height: 5em;
+		width: 5em;
+	}*/
+}
+
+@media (min-width: 992px) {
+	body{
+		font-size: 28px;
+	}
+	
+	.navbar-toggle .nav-label {
+	}
+
+	/*h1{
+		font-size: 6.5em;
+	}*/
+	/*h2{
+		font-size: 2.1em;
+	}*/
+
+	header.home-panel .container > p{
+		font-size: 2.286em;
+	}
+
+	header.home-panel button{
+		font-size: 1.714em;
+	}
+
+}
+
+@media (min-width: 1200px) {
+	/*body{
+		font-size: 28px;
+	}*/
+	/*h1{
+		font-size: 6.9em;
+	}*/
+
+}
