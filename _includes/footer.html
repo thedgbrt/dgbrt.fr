@@ -6,6 +6,7 @@
     <script src="/js/bootstrap.min.js"></script>
     <script src="/js/isotope.pkgd.min.js"></script>
     <script src="/js/holder.js"></script>
+    <script src="/js/jquery.equalheights.js"></script>
 
     <script>
     
@@ -18,9 +19,11 @@
 
     $(window).resize(function(){
         typeAdjustments();
+        blocksHeightAdjustments();
     });
 
     $(window).load( function(){
+        blocksHeightAdjustments();
         // isotope
         var $container = $('#project-wrapper');
         // init
@@ -96,10 +99,10 @@
         });
     }
 
-    function thumbnailsAdjustments(){
-        $('#portfolio .thumbnail').height('auto');
-        if(($(window).width()) > 760)
-            $('#portfolio .thumbnail').equalHeights();
+    function blocksHeightAdjustments(){
+        $('#skills .skill').height('auto');
+        if(($(window).width()) > 480)
+            $('#skills .skill').equalHeights();
     }
     </script>
   </body>

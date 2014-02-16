@@ -52,3 +52,24 @@ article footer{
 		}
 	}
 }
+
+/* competences */
+.skill{
+	@media(min-width: @screen-xs) and (max-width: @screen-sm) {
+		.make-xs-column(6);
+	}
+	.make-sm-column(3);
+
+	@media(max-width: @screen-sm) {
+		margin-bottom: (4 * @padding-large-vertical);
+	}
+
+	.skill-icon{
+		text-align:center;
+		img{
+			border: 1px solid @gray-lighter;
+			border-radius: 100%;
+			padding: 20px;
+		}
+	}
+}
