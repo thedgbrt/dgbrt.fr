@@ -1,19 +1,36 @@
 /* custom navbar that blends with the content below, without being position:fixed */
 .navbar-blend-top {
-  position: absolute;
-  top: 0;
-  z-index: @zindex-navbar;
-  border-width: 0 0 1px;
-  width: 100%;
-  background: transparent;
-
-  @media (min-width: @grid-float-breakpoint) {
-    border-radius: 0;
-  }
+	// position: absolute;
+	// top: 0;
+	z-index: @zindex-navbar;
+	border-width: 0 0 1px;
+	width: 100%;
+	background: url(../images/patt-custom-4c.jpg) fixed;
+	border-color: transparent;
+	margin:0;
+	@media (min-width: @grid-float-breakpoint) {
+	border-radius: 0;
+	}
+	@media (max-width: @grid-float-breakpoint-max) {
+		.navbar-collapse, .navbar-form{
+			border: 0;
+			background: url(../images/patt-custom-4a.jpg) fixed;
+			text-align: center;
+		}
+		.navbar-nav{
+			> li > a {
+	        	color: @brand-primary;
+	        	&:hover{
+	        		text-decoration: underline;
+	        	}
+	      	}
+	    }
+  	}
 }
 
 .jumbotron{
-	padding-top: (@navbar-height + @navbar-margin-bottom + @jumbotron-padding);
+	// padding-top: (@navbar-height + @navbar-margin-bottom + @jumbotron-padding);
+	background: url(../images/patt-custom-4c.jpg) fixed;
 }
 
 article footer{
