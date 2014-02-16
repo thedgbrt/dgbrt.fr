@@ -1,3 +1,21 @@
+/* custom navbar that blends with the content below, without being position:fixed */
+.navbar-blend-top {
+  position: absolute;
+  top: 0;
+  z-index: @zindex-navbar;
+  border-width: 0 0 1px;
+  width: 100%;
+  background: transparent;
+
+  @media (min-width: @grid-float-breakpoint) {
+    border-radius: 0;
+  }
+}
+
+.jumbotron{
+	padding-top: (@navbar-height + @navbar-margin-bottom + @jumbotron-padding);
+}
+
 article footer{
 	border-top: 1px solid @gray-lighter;
 	margin-top: (2 * @padding-large-vertical);
