@@ -19,8 +19,10 @@ article footer{
 
 #project-wrapper{
 	.project{
-		@media(max-width: @screen-sm) {
-			width: 100%;
+		@media(min-width: @screen-xs) and (max-width: @screen-sm) {
+			.make-xs-column(6);
 		}
+		.make-sm-column(6);
+	    .make-md-column(4);
 	}
 }
