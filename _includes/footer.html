@@ -4,23 +4,56 @@
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
     <script src="/js/bootstrap.min.js"></script>
+    <script src="/js/isotope.pkgd.min.js"></script>
     <script src="/js/holder.js"></script>
-    <script src="/js/jquery.equalheights.js"></script>
 
     <script>
     
     $(document).ready(function(){
         $('[rel="tooltip"]').tooltip();
         typeAdjustments();
+
+
     });
 
     $(window).resize(function(){
         typeAdjustments();
-        thumbnailsAdjustments();
     });
 
     $(window).load( function(){
-        thumbnailsAdjustments();
+        // isotope
+        var $container = $('#project-wrapper');
+        // init
+        $container.isotope({
+          // options
+          itemSelector: '.project',
+          layoutMode: 'fitRows',
+          getSortData: {
+            date: '.date'
+          },
+          sortAscending: {
+            date: false
+          }
+        });
+
+        $('#project-filters').on( 'click', 'li', function( event ) {
+          var filterValue = $(this).attr('data-filter-value');
+          $container.isotope({ filter: filterValue });
+          $('#project-filters').children('li').removeClass('active');
+          $(this).addClass('active');
+        });
+
+        $('#project-sorts').on( 'click', 'button', function() {
+          var sortValue = $(this).attr('data-sort-value');
+          $container.isotope({ sortBy: sortValue });
+        });
+
+        $container.isotope( 'on', 'layoutComplete', function(){
+          setTimeout(function () {
+            $('#project-count span').html($('.project:visible').length);
+            }, 100);
+        });
+
     });
 
     $(window).scroll(function() {

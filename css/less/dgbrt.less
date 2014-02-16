@@ -2,3 +2,25 @@ article footer{
 	border-top: 1px solid @gray-lighter;
 	margin-top: (2 * @padding-large-vertical);
 }
+
+/* portfolio-webdesigner */
+
+#filter-bar{
+	margin-bottom: (2 * @padding-large-vertical);
+	h4{
+		padding-right: @padding-base-horizontal;
+	}
+}
+
+#project-count{
+	text-align:right;
+	.navbar-vertical-align(50px);
+}
+
+#project-wrapper{
+	.project{
+		@media(max-width: @screen-sm) {
+			width: 100%;
+		}
+	}
+}
