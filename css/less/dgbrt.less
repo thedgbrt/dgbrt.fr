@@ -1,11 +1,12 @@
 /* custom navbar that blends with the content below, without being position:fixed */
+
 .navbar-blend-top {
 	// position: absolute;
 	// top: 0;
 	z-index: @zindex-navbar;
 	border-width: 0 0 1px;
 	width: 100%;
-	background: url(../images/patt-custom-4c.jpg) fixed;
+	background: transparent;
 	border-color: transparent;
 	margin:0;
 	@media (min-width: @grid-float-breakpoint) {
@@ -28,10 +29,16 @@
   	}
 }
 
-.jumbotron{
-	// padding-top: (@navbar-height + @navbar-margin-bottom + @jumbotron-padding);
-	background: url(../images/patt-custom-4c.jpg) fixed;
+#default{
+	.jumbotron{
+		// padding-top: (@navbar-height + @navbar-margin-bottom + @jumbotron-padding);
+		background: url(../images/patt-custom-4c.jpg) fixed;
+	}
+	.navbar-blend-top{
+		background: url(../images/patt-custom-4c.jpg) fixed;
+	}
 }
+
 
 article footer{
 	border-top: 1px solid @gray-lighter;
@@ -83,6 +90,20 @@ article footer{
 			float: left;
 		}
 	}
+}
+
+/* project page */
+
+.project-images{
+}
+.project-masonry-images{
+	margin: 0 (@grid-gutter-width / 2);
+}
+
+.project-image{
+	max-width:100%;
+	display:inline-block;
+	margin-bottom: @grid-gutter-width;
 }
 
 /* competences */
