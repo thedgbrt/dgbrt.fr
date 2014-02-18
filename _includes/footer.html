@@ -4,29 +4,22 @@
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
     <script src="/js/bootstrap.min.js"></script>
+    <script src="/js/breakpoints.js"></script>
     <script src="/js/isotope.pkgd.min.js"></script>
     <script src="/js/holder.js"></script>
     <script src="/js/jquery.equalheights.js"></script>
     <script src="/js/jquery.magnific-popup.custom-fork.js"></script>
-    <script src="/js/owl.carousel.min.js"></script>
+    <script src="/js/owl.carousel.custom-fork.js"></script>
 
     <script>
     
+    // define global variables
+    var owl;
+
     $(document).ready(function(){
         $('[rel="tooltip"]').tooltip();
         // typeAdjustments();
         projectImagesLightbox();
-
-        $("#testimonies-carousel").owlCarousel({
-          transitionStyle : "fade",
-          autoPlay: 10000,
-          // "singleItem:true" is a shortcut for:
-          items : 2, 
-          itemsDesktop : false,
-          itemsDesktopSmall : false,
-          itemsTablet: false,
-          itemsMobile : [992,1]
-        });
  
     });
 
@@ -39,6 +32,39 @@
         blocksHeightAdjustments();
         portfolioIsotope();
         projectImagesMasonry();
+    });
+
+    $(window).setBreakpoints({
+      // use only largest available vs use all available
+          distinct: true, 
+      // array of widths in pixels where breakpoints
+      // should be triggered
+          breakpoints: [
+              992,
+              1
+          ] 
+      });     
+
+    $(window).bind('enterBreakpoint1',function() { // everything up to 992px wide
+        
+        $("#testimonies-carousel").owlCarousel({
+          transitionStyle : "fade",
+          autoPlay: 10000,
+          // "singleItem:true" is a shortcut for:
+          items : 2, 
+          itemsDesktop : false,
+          itemsDesktopSmall : false,
+          itemsTablet: false,
+          itemsMobile : [992,1]
+        });
+
+        owl = $("#testimonies-carousel").data('owlCarousel');
+
+    });
+
+    $(window).bind('enterBreakpoint992',function() { // everything after 992px
+      owl.destroy();
+
     });
 
     $(window).scroll(function() {
