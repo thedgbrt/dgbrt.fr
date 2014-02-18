@@ -117,9 +117,18 @@ header.home-panel, section.home-panel, footer.home-panel{
 header.home-panel{
 	background: url("../images/homepage-main-bg.jpg") center center no-repeat #FFCB04;
 	background-size: contain;
+	position: relative;
 	// @media (min-width: @grid-float-breakpoint) {
 	// 	background-position: fixed;
 	// }
+
+	a{
+
+		position: absolute;
+		bottom: @line-height-computed;
+
+	}
+
 }
 
 footer.home-panel{
