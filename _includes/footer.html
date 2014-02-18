@@ -13,28 +13,28 @@
     
     $(document).ready(function(){
         $('[rel="tooltip"]').tooltip();
-        typeAdjustments();
+        // typeAdjustments();
         projectImagesLightbox();
     });
 
     $(window).resize(function(){
-        typeAdjustments();
-        blocksHeightAdjustments();
+        // typeAdjustments();
+        // blocksHeightAdjustments();
     });
 
     $(window).load( function(){
-        blocksHeightAdjustments();
+        // blocksHeightAdjustments();
         portfolioIsotope();
         projectImagesMasonry();
     });
 
     $(window).scroll(function() {
 
-        var topWin = $(window).scrollTop();
-        var bottomWin = $(window).scrollTop() + $(window).height();
-        var bottomDoc = $(document).height();
-        var p1Height = $("header.home-panel").height(); // height of main panel
-        
+        // var topWin = $(window).scrollTop();
+        // var bottomWin = $(window).scrollTop() + $(window).height();
+        // var bottomDoc = $(document).height();
+        // var p1Height = $("header.home-panel").height(); // height of main panel
+        // 
         // if(bottomWin >= bottomDoc - 100){
         //     // $("header.main").removeClass("bounceOutUp");
         //     $("header.main").addClass("ontop bounceInDown animated");

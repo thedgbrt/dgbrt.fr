@@ -1,3 +1,12 @@
+/* ------ */
+/* global */
+/* ------ */
+
+html, body{ // allows for full screen panels
+	height: 100%;
+	width: 100%;
+}
+
 /* custom navbar that blends with the content below, without being position:fixed */
 
 .navbar-blend-top {
@@ -29,6 +38,15 @@
   	}
 }
 
+article footer{
+	border-top: 1px solid @gray-lighter;
+	margin-top: (2 * @padding-large-vertical);
+}
+
+/* ------ */
+/* layouts */
+/* ------ */
+
 #default{
 	.jumbotron{
 		// padding-top: (@navbar-height + @navbar-margin-bottom + @jumbotron-padding);
@@ -39,14 +57,91 @@
 	}
 }
 
+#homepage{
 
-article footer{
-	border-top: 1px solid @gray-lighter;
-	margin-top: (2 * @padding-large-vertical);
 }
 
-/* portfolio-webdesigner */
+/* ------ */
+/* pages */
+/* ------ */
 
+/*
+homepage
+*/
+#homepage{ // allows me to add panels on other page without full height
+	header.home-panel, section.home-panel, footer.home-panel{
+		min-height: 100%;
+	}
+}
+header.home-panel, section.home-panel, footer.home-panel{
+	width: 100%;
+	text-align: center;
+	padding-bottom: @padding-large-vertical;
+}
+
+header.home-panel{
+	background: url("../images/homepage-main-bg.jpg") center center no-repeat #FFCB04 fixed;
+	background-size: contain;
+}
+
+.home-panel#panel-skills{
+	background: url("../images/patt-custom-4c.jpg") repeat fixed;
+}
+
+.skill-circle{
+	background: #fff;
+	border-radius: 100%;
+	border: 1px solid @brand-primary;
+	padding: @padding-large-vertical;
+	width: 115px;
+	height: 115px;
+	img{
+		width: 50%;
+	}
+}
+
+#panel-skills .col-xs-6{
+	margin-bottom: @padding-large-vertical;
+}
+
+a.icon-social{
+	color: #fff;
+	width: 52px;
+	height: 52px;
+	display: inline-block;
+	border: 0;
+	border-radius: 50%;
+	padding-top: 15px;
+	i{
+		font-size: 24px;
+	}
+	span{
+		text-indent: -9999px;
+		display:block;
+	}
+	&.twitter{
+		background-color: #77CBEF;
+	}
+	&.linkedin{
+		background-color: #1284C7;
+	}
+	&.facebook{
+		background-color: #537ABC;
+	}
+	&.google-plus{
+		background-color: #DD4B39;
+	}
+	&.github{
+		background-color: #666;
+	}
+	&:hover{
+		background-color: @brand-primary;
+	}
+}
+
+/*
+portfolio-webdesigner
+*/
 #filter-bar{
 	margin-bottom: (2 * @padding-large-vertical);
 	h4{
@@ -92,7 +187,9 @@ article footer{
 	}
 }
 
-/* project page */
+/* 
+project page
+*/
 
 .project-images{
 }
@@ -106,7 +203,9 @@ article footer{
 	margin-bottom: @grid-gutter-width;
 }
 
-/* competences */
+/*
+competences
+*/
 .skill{
 	@media(min-width: @screen-xs) and (max-width: @screen-sm) {
 		.make-xs-column(6);
