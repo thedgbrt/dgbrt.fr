@@ -5,7 +5,7 @@ published: true
 
 <header class="home-panel">
 
-	<div class="container">
+	<div class="container panel-head">
 
 		<h1>Design &amp; code</h1>
 
@@ -21,7 +21,7 @@ published: true
 
 	<div class="container">
 
-		<header>
+		<header class="panel-head">
 
 			<h2>Je conçois des sites élégants et inspirants.</h2>
 
@@ -39,55 +39,43 @@ published: true
 
 	<div class="container">
 
-		<header>
+		<header class="panel-head">
 
 			<h2>Techniquement, je suis un pur produit web.</h2>
 
 			<p>J'imagine chaque site avec tous les atouts et contraintes du milieu.</p>
 
 		</header>
-		
-		<div class="col-xs-6 col-md-3">
 
-			<div class="skill-circle">
+		<div class="skill-circle col-xs-6">
 
-				<img src="/images/icones/information-architecture.svg">
-				<p>Webdesign / Design UX</p>
+			<img src="/images/icones/information-architecture.svg">
 
-			</div>
+			<p>Webdesign & Design UX</p>
 
 		</div>
 
-		<div class="col-xs-6 col-md-3">
+		<div class="skill-circle col-xs-6">
 
-			<div class="skill-circle">
+			<img src="/images/icones/front-end-code.svg">
 
-				<img src="/images/icones/front-end-code.svg">
-				<p>Intégration Web</p>
-
-			</div>
+			<p>Intégration Web html / css / js</p>
 
 		</div>
 
-		<div class="col-xs-6 col-md-3">
+		<div class="skill-circle col-xs-6">
 
-			<div class="skill-circle">
+			<img src="/images/icones/maitrise-d-ouvrage.svg">
 
-				<img src="/images/icones/maitrise-d-ouvrage.svg">
-				<p>Maîtrise d'ouvrage</p>
-
-			</div>
+			<p>Maîtrise d'ouvrage</p>
 
 		</div>
 
-		<div class="col-xs-6 col-md-3">
+		<div class="skill-circle col-xs-6">
 
-			<div class="skill-circle">
+			<img src="/images/icones/site-simple.svg">
 
-				<img src="/images/icones/site-simple.svg">
-				<p>Wordpress et Prestashop</p>
-
-			</div>
+			<p>Wordpress et Prestashop</p>
 
 		</div>
 
@@ -101,7 +89,7 @@ published: true
 
 	<div class="container">
 
-		<header>
+		<header class="panel-head">
 
 			<h2>Ils sont nombreux à en dire du bien.</h2>
 
@@ -109,11 +97,9 @@ published: true
 
 		</header>
 
-		<article class="col-md-6">
+		<article class="col-xs-12 col-md-6 testimony">
 
 			<header>
-
-					<img src="/images/clients/david_bollt.jpg">
 
 				</header>
 
@@ -125,17 +111,18 @@ published: true
 
 				<footer>
 
-					<cite class="author">David Bollt</cite>, CEO de ModelSociety
+					<img src="/images/clients/david_bollt.jpg">
+					<cite class="author">David Bollt</cite><br>
+					CEO de ModelSociety
+					<div class="clear"></div>
 
 				</footer>
 
 		</article>
 
-		<article class="col-md-6">
+		<article class="col-xs-12 col-md-6 testimony">
 
 			<header>
-
-					<img src="/images/clients/izoa.jpg">
 
 				</header>
 
@@ -147,17 +134,18 @@ published: true
 
 				<footer>
 
-					<cite class="author">Phadani Pho</cite>, Gérante de Kazeo, site Izoa
+					<img src="/images/clients/izoa.jpg">
+					<cite class="author">Phadani Pho</cite><br>
+					Gérante de Kazeo, site Izoa
+					<div class="clear"></div>
 
 				</footer>
 
 		</article>
 
-		<article class="col-md-6">
+		<article class="col-xs-12 col-md-6 testimony">
 
 			<header>
-
-					<img src="/images/clients/john_nee.jpg">
 
 				</header>
 
@@ -169,17 +157,20 @@ published: true
 
 				<footer>
 
-					<cite class="author">John Nee</cite>, CEO de Cryptozoic Entertainment, site PrintWarcraft
+					<img src="/images/clients/john_nee.jpg">
+					<cite class="author">John Nee</cite><br>
+					CEO de Cryptozoic Entertainment
+					<div class="clear"></div>
 
 				</footer>
 
 		</article>
 
-		<article class="col-md-6">
+		<article class="col-xs-12 col-md-6 testimony">
 
 			<header>
 
-					<img src="/images/clients/claire_michel.jpg">
+					
 
 				</header>
 
@@ -191,7 +182,10 @@ published: true
 
 				<footer>
 
-					<cite class="author">Claire Michel</cite>, Gérante de Euratalent
+					<img src="/images/clients/claire_michel.jpg">
+					<cite class="author">Claire Michel</cite><br>
+					Gérante de Euratalent
+					<div class="clear"></div>
 
 				</footer>
 
@@ -201,11 +195,11 @@ published: true
 
 </section>
 
-<footer class="home-panel main">
+<footer class="home-panel main" id="panel-contact">
 
 	<div class="container">
 
-		<header>
+		<header class="panel-head">
 
 			<h2>Et vous, c'est quoi votre projet?</h2>
 
@@ -213,9 +207,13 @@ published: true
 
 		</header>
 
-		<p><i class="fa fa-envelope-o"></i>dagobert@dgbrt.fr</p>
+		<section>
+
+			<p class="contact-info"><i class="fa fa-envelope-o"></i> <span>dagobert@dgbrt.fr</span></p>
 		
-		<p><i class="fa fa-mobile"></i> 06 51 41 65 27</p>
+			<p class="contact-info"><i class="fa fa-mobile"></i> <span> 06 51 41 65 27</span></p>
+
+		</section>
 		
 		<footer>
 
