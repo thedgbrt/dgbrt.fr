@@ -9,7 +9,7 @@
     <script src="/js/holder.js"></script>
     <script src="/js/jquery.equalheights.js"></script>
     <script src="/js/jquery.magnific-popup.custom-fork.js"></script>
-    <script src="/js/owl.carousel.custom-fork.js"></script>
+    <script src="/js/owl.carousel.min.js"></script>
 
     <script>
     
@@ -46,16 +46,16 @@
       });     
 
     $(window).bind('enterBreakpoint1',function() { // everything up to 992px wide
-        
+
         $("#testimonies-carousel").owlCarousel({
           transitionStyle : "fade",
           autoPlay: 10000,
           // "singleItem:true" is a shortcut for:
-          items : 2, 
+          items : 1, 
           itemsDesktop : false,
           itemsDesktopSmall : false,
           itemsTablet: false,
-          itemsMobile : [992,1]
+          itemsMobile : false
         });
 
         owl = $("#testimonies-carousel").data('owlCarousel');
