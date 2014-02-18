@@ -49,7 +49,6 @@ html, body{ // allows for full screen panels
 	}
 	.navbar-blend-top{
 		background: url(../images/patt-custom-4c.jpg) fixed;
-		@media (max-width: @grid-float-breakpoint-max);
 	}
 }
 
@@ -87,7 +86,9 @@ html, body{ // allows for full screen panels
 	        		color: @brand-primary;
 	        	}
 	      	}
-			padding-bottom: (@navbar-height);
+			@media (max-width: @grid-float-breakpoint-max){
+				padding-bottom: (@navbar-height);
+			}
 	    }
 	}
 	header.home-panel{
@@ -109,6 +110,7 @@ homepage
 	}
 }
 header.home-panel, section.home-panel, footer.home-panel{
+	height: 100%;
 	width: 100%;
 	text-align: center;
 	padding-bottom: @padding-large-vertical;
@@ -122,7 +124,12 @@ header.home-panel{
 	// 	background-position: fixed;
 	// }
 
-	a{
+	h1{
+		font-family: "abril-fatface-1";
+		font-weight: normal;
+	}
+
+	a.scroll-for-more{
 		
 		position: absolute;
 		bottom: 0;
@@ -144,7 +151,7 @@ header.home-panel{
 
 	header{
 		position:relative;
-		padding-bottom: 100px;
+		padding-bottom: 140px;
 		height:100%;
 		a.btn{
 			
@@ -185,15 +192,16 @@ footer.home-panel{
 
 .skill-circle{
 
-	height: 140px;
+	// height: 140px;
+	padding: 0;
 
 	img {
 		background: #fff;
 		border-radius: 100%;
 		border: 1px solid @brand-primary;
 		padding: @padding-large-vertical;
-		width: 100px;
-		height: 100px;
+		width: 72px;
+		height: 72px;
 	}
 }
 
