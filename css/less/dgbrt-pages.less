@@ -1,0 +1,90 @@
+/* ------ */
+/* pages */
+/* ------ */
+
+/*
+portfolio-webdesigner
+*/
+#filter-bar{
+	margin-bottom: (2 * @padding-large-vertical);
+	h4{
+		padding-right: @padding-base-horizontal;
+	}
+}
+
+#project-count{
+	text-align:right;
+	.navbar-vertical-align(50px);
+}
+
+#project-wrapper{
+	.project{
+		@media(min-width: @screen-xs) and (max-width: @screen-sm) {
+			.make-xs-column(6);
+		}
+		.make-sm-column(6);
+	    .make-md-column(4);
+	    .thumbnail{
+	    	border:0;
+	    	img, a img{
+	    		border: 1px solid @gray-lighter;
+	    		padding: 10px;
+	    		border-radius:5px;
+	    		width:100%;
+	    	}
+	    	.caption{
+	    		padding:0;
+		    	.date{
+		    		display: none;
+		    	}
+	    	}
+	    }
+	}
+	.project-tags{
+		.label{
+			margin-bottom: @padding-small-vertical;
+			margin-right: @padding-small-vertical;
+			display: block;
+			float: left;
+		}
+	}
+}
+
+/* 
+project page
+*/
+
+.project-images{
+}
+.project-masonry-images{
+	margin: 0 (@grid-gutter-width / 2);
+}
+
+.project-image{
+	max-width:100%;
+	display:inline-block;
+	margin-bottom: @grid-gutter-width;
+}
+
+/*
+competences
+*/
+.skill{
+	@media(min-width: @screen-xs) and (max-width: @screen-sm) {
+		.make-xs-column(6);
+	}
+	.make-sm-column(3);
+
+	@media(max-width: @screen-sm) {
+		margin-bottom: (4 * @padding-large-vertical);
+	}
+
+	.skill-icon{
+		text-align:center;
+		img{
+			border: 1px solid @gray-lighter;
+			border-radius: 100%;
+			padding: 20px;
+		}
+	}
+}

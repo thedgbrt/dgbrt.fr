@@ -1,0 +1,39 @@
+/* ------ */
+/* global */
+/* ------ */
+
+html, body{ // allows for full screen panels
+	height: 100%;
+	width: 100%;
+}
+
+/* custom navbar that blends with the content below, without being position:fixed */
+
+.navbar-blend-top {
+	// position: absolute;
+	// top: 0;
+	z-index: @zindex-navbar;
+	border: 0;
+	width: 100%;
+	background: transparent;
+	border-color: transparent;
+	margin:0;
+	@media (min-width: @grid-float-breakpoint) {
+		border-radius: 0;
+	}
+	@media (max-width: @grid-float-breakpoint-max) {
+		.navbar-collapse, .navbar-form{
+			border: 0;
+			background: url(../images/patt-custom-4a.jpg) fixed;
+			text-align: center;
+		}
+		.navbar-nav{
+			> li > a {
+	        	color: @brand-primary;
+	        	&:hover{
+	        		text-decoration: underline;
+	        	}
+	      	}
+	    }
+  	}
+}
