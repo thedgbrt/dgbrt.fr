@@ -20,6 +20,19 @@
         $('[rel="tooltip"]').tooltip();
         // typeAdjustments();
         projectImagesLightbox();
+
+        $("#testimonies-carousel").owlCarousel({
+          transitionStyle : "fade",
+          autoPlay: 10000,
+          // "singleItem:true" is a shortcut for:
+          items : 1, 
+          itemsDesktop : false,
+          itemsDesktopSmall : false,
+          itemsTablet: false,
+          itemsMobile : false
+        });
+
+        owl = $("#testimonies-carousel").data('owlCarousel');
  
     });
 
@@ -45,27 +58,27 @@
           ] 
       });     
 
-    $(window).bind('enterBreakpoint1',function() { // everything up to 992px wide
+    // $(window).bind('enterBreakpoint1',function() { // everything up to 992px wide
 
-        $("#testimonies-carousel").owlCarousel({
-          transitionStyle : "fade",
-          autoPlay: 10000,
-          // "singleItem:true" is a shortcut for:
-          items : 1, 
-          itemsDesktop : false,
-          itemsDesktopSmall : false,
-          itemsTablet: false,
-          itemsMobile : false
-        });
+        // $("#testimonies-carousel").owlCarousel({
+        //   transitionStyle : "fade",
+        //   autoPlay: 10000,
+        //   // "singleItem:true" is a shortcut for:
+        //   items : 1, 
+        //   itemsDesktop : false,
+        //   itemsDesktopSmall : false,
+        //   itemsTablet: false,
+        //   itemsMobile : false
+        // });
 
-        owl = $("#testimonies-carousel").data('owlCarousel');
+        // owl = $("#testimonies-carousel").data('owlCarousel');
 
-    });
+    // });
 
-    $(window).bind('enterBreakpoint992',function() { // everything after 992px
-      owl.destroy();
+    // $(window).bind('enterBreakpoint992',function() { // everything after 992px
+    //   owl.destroy();
 
-    });
+    // });
 
     $(window).scroll(function() {
 

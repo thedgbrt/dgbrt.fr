@@ -1,0 +1,83 @@
+.navbar, .navbar-brand{ font-size: @font-size-small; line-height: @line-height-small-computed;}
+.navbar-brand{ height: (@line-height-small-computed * 2);}
+#panel-main h1{ font-size: @font-size-h1 * 1.4; }
+#panel-main h1{ margin-bottom: 0; }
+
+//
+// Vertical media queries for precision
+@media (min-height: 380px){
+  
+  #panel-main{
+    .panel-head{
+      position:absolute;
+      top: 24%; //comes from golden ratio calculation
+      width: 100%;
+
+      .lead{
+        margin-bottom: (4 * @padding-large-vertical);
+      }
+    }
+  }
+
+}
+
+
+//
+// Responsive type
+// --------------------------------------------------
+@media (min-width: @screen-xs-min){ //480px wide and above
+  
+}
+
+@media (min-width: @screen-sm-min){ //768px wide and above
+
+  .navbar, .navbar-brand{ font-size: @font-size-base; line-height: @line-height-computed;}
+  .navbar{ min-height: @navbar-height * 1.15; }
+  .navbar-brand{ height: (@line-height-computed * 2);}
+  .logo-img{ height: 44px; width: 44px; }
+
+  #panel-main{ margin-top: -72px; padding-top: 72px;}
+
+  h2, .h2 { font-size: (@font-size-h2 * 1.15); }
+  blockquote{ font-size: (@font-size-base * 1.25); }
+  .jumbotron h1 { font-size: @font-size-h1 * 1.25; }
+  .jumbotron p { font-size: @jumbotron-font-size * 1.25; }
+
+  .home-panel{ padding: (@jumbotron-padding*1.25) 0; }
+  #panel-main a.scroll-for-more{ }
+  #panel-main h1{ font-size: @font-size-h1 * 2.25; }
+  #panel-main h1{ margin-bottom: @padding-base-vertical; }
+  #panel-main .lead{ font-size: (@font-size-base * 2); }
+  #panel-main .scroll-for-more{ font-size: (@font-size-base * 1.25); }
+
+}
+
+@media (min-width: @screen-md-min){ // 992px wide and above
+
+  body { font-size: @font-size-base * 1.05; }
+  // h2, .h2 { font-size: (@font-size-h2 * 1.25); }
+  .lead{ font-size: (@font-size-base * 1.75); }
+
+  .home-panel{ padding: (@jumbotron-padding*1.5) 0; }
+  #panel-main a.scroll-for-more{  }
+  #panel-main h1{ font-size: @font-size-h1 * 3; }
+  #panel-main .lead{ font-size: (@font-size-base * 2.5); }
+
+}
+
+@media (min-width: @screen-lg-min){ // 1200px wide and above
+
+  body { font-size: @font-size-base * 1.25; }
+  
+  // .navbar, .navbar-brand{ font-size: @font-size-base * 1.25; line-height: @line-height-computed *1.25;}
+  // .navbar{ min-height: @navbar-height * 1.25; }
+  // .logo-img{ height: 60px; width: 60px; }
+
+  .jumbotron h1 { font-size: @font-size-h1 * 1.5; }
+  .jumbotron p { font-size: @jumbotron-font-size * 1.5; }
+
+  .home-panel{ padding: (@jumbotron-padding*2) 0; }
+  #panel-main h1{ font-size: @font-size-h1 * 3.5; }
+  #panel-main .lead{ font-size: (@font-size-base * 3); }
+
+}

@@ -155,8 +155,9 @@
   // padding: @navbar-padding-vertical @navbar-padding-horizontal;
   // font-size: @font-size-large;
   line-height: @line-height-computed;
-  height: @line-height-computed;
-  .navbar-vertical-align(34px);
+  height: (@line-height-computed * 2);
+  margin-top: @navbar-padding-vertical;
+  margin-bottom: @navbar-padding-vertical;
   &:hover,
   &:focus {
     text-decoration: none;
@@ -182,8 +183,8 @@
   /*text-indent: -9999px;*/
   background-size: contain;
   display: block;
-  width: 34px;
-  height: 34px;
+  width: 38px;
+  height: 38px;
   float: left;
   margin: 0 @navbar-padding-horizontal;
 }
@@ -203,11 +204,12 @@
   float: right;
   margin-right: @navbar-padding-horizontal;
   padding: 9px 10px;
-  .navbar-vertical-align(34px);
   background-color: transparent;
   background-image: none; // Reset unusual Firefox-on-Android default style; see https://github.com/necolas/normalize.css/issues/214
   border: 1px solid transparent;
   border-radius: @border-radius-base;
+  margin-top: @navbar-padding-vertical;
+  margin-bottom: @navbar-padding-vertical;
 
   // We remove the `outline` here, but later compensate by attaching `:hover`
   // styles to `:focus`.
@@ -219,7 +221,7 @@
   .icon-bar {
     display: block;
     width: 22px;
-    height: 3px;
+    height: 4px;
     border-radius: 1px;
   }
   .icon-bar + .icon-bar {
@@ -279,7 +281,7 @@
     > li {
       float: left;
       > a {
-        padding-top:    @navbar-padding-vertical;
+        padding-top:    @navbar-padding-vertical-top;
         padding-bottom: @navbar-padding-vertical;
       }
     }

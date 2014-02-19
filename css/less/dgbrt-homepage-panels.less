@@ -10,9 +10,7 @@ homepage
 }
 
 .panel-head{
-	p{
-		font-size: (@font-size-base * 1.25);
-	}
+	
 }
 
 .panel-content{
@@ -24,15 +22,9 @@ homepage
 	background: url("../images/homepage-main-bg.jpg") center center no-repeat #FFCB04;
 	background-size: contain;
 	position: relative;
-	margin-top: -(@navbar-height + 1);
-	padding-top: (@navbar-height);
+	margin-top: -68px;
+	padding-top: 68px;
 	height: 100%;
-
-	.panel-head{
-		position:absolute;
-		top: 24%; //comes from golden ratio calculation
-		width: 100%;
-	}
 
 	h1{
 		font-family: "abril-fatface-1";
@@ -40,14 +32,11 @@ homepage
 		text-transform: uppercase;
 	}
 
-	a.scroll-for-more{
+	.scroll-for-more{
 		
-		position: absolute;
-		bottom: 0;
-		padding: (2 * @padding-large-vertical) 0;
-		width: 100%;
-		display: block;
-		border: 0;
+		padding: @padding-large-vertical @padding-large-horizontal;
+		border: 1px solid black;
+		border-radius: 4px;
 
 		&:hover{
 			color: #fff;
@@ -72,8 +61,9 @@ homepage
 			width: 100%;
 	
 			img{
-				width: 100%;
+				max-width: 100%;
 				display: block;
+				margin: 0 auto;
 			}
 			
 			.btn-wrapper{
@@ -143,7 +133,6 @@ homepage
 			padding:0;
 			margin-bottom: @padding-large-vertical;
 			border:0;
-			font-size: @font-size-base;
 			&:before, &:after{
 				content: "”";
 			}
