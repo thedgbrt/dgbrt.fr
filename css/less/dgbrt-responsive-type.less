@@ -21,6 +21,14 @@
 
 }
 
+@media (min-height: 600px){
+  .home-panel{
+    .lead{
+      margin-bottom: (4 * @padding-large-vertical);
+    }
+  }
+}
+
 
 //
 // Responsive type
@@ -59,6 +67,7 @@
   .lead{ font-size: (@font-size-base * 1.75); }
 
   .home-panel{ padding: (@jumbotron-padding*1.5) 0; }
+  .home-panel .lead{ font-size: (@font-size-base * 1.5); }
   #panel-main a.scroll-for-more{  }
   #panel-main h1{ font-size: @font-size-h1 * 3; }
   #panel-main .lead{ font-size: (@font-size-base * 2.5); }
