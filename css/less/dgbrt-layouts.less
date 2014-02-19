@@ -41,13 +41,21 @@
 		.navbar-nav{
 			> li > a {
 	        	color: #000;
-	        	text-decoration: underline;
+	        	text-decoration: none;
 	        	&:hover{
-	        		color: @brand-primary;
+	        		color: #fff;
 	        	}
 	      	}
 			@media (max-width: @grid-float-breakpoint-max){
 				padding-bottom: (@navbar-height);
+
+				> li > a {
+		        	text-decoration: underline;
+		        	&:hover{
+		        		color: @brand-primary;
+		        	}
+		      	}
+
 			}
 	    }
 	}
