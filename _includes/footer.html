@@ -5,6 +5,7 @@
     <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
     <script src="/js/bootstrap.min.js"></script>
     <script src="/js/breakpoints.js"></script>
+    <script src="/js/response.min.js"></script>
     <script src="/js/isotope.pkgd.min.js"></script>
     <script src="/js/holder.js"></script>
     <script src="/js/jquery.equalheights.js"></script>
@@ -15,6 +16,14 @@
     
     // define global variables
     var owl;
+
+    Response.create({
+      prop: "width"  // "width" "device-width" "height" "device-height" or "device-pixel-ratio"
+      , prefix: "src"  // the prefix(es) for your data attributes (aliases are optional)
+      , breakpoints: [0, 1200] // min breakpoints (defaults for width/device-width)
+      , lazy: true // optional param - data attr contents lazyload rather than whole page at once
+    });
+
 
     $(document).ready(function(){
         $('[rel="tooltip"]').tooltip();
