@@ -7,14 +7,50 @@ portfolio-webdesigner
 */
 #filter-bar{
 	margin-bottom: (2 * @padding-large-vertical);
-	h4{
+	h5{
 		padding-right: @padding-base-horizontal;
+		float: left;
 	}
+
+	@media(max-width: @screen-xs) {
+		h5{
+			font-size: (@font-size-small * 0.85);
+		}
+		.nav>li>a{
+			padding: @padding-xs-vertical @padding-xs-horizontal;
+			font-size: (@font-size-small * 0.85);
+			margin-bottom: @padding-base-vertical;
+		}
+	}
+
+	@media(max-width: @screen-sm) {
+		h5{
+			float: none;
+		}
+		.nav>li>a{
+			padding: @padding-small-vertical @padding-small-horizontal;
+			font-size: (@font-size-small);
+			margin-bottom: @padding-base-vertical;
+		}
+	}
+
+
 }
 
 #project-count{
+	
 	text-align:right;
-	.navbar-vertical-align(50px);
+	padding-top: 10px;
+	
+	@media(max-width: @screen-xs) {
+		font-size: (@font-size-small * 0.85);
+	}
+
+	@media(max-width: @screen-sm) {
+		text-align: left;
+		font-size: (@font-size-small);
+	}
+
 }
 
 #project-wrapper{
