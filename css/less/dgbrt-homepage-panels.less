@@ -13,10 +13,6 @@ homepage
 	
 }
 
-.panel-content{
-	padding: (@line-height-computed / 2) 0 @line-height-computed 0;
-}
-
 /* first panel */
 #panel-main{
 	background: url("../images/homepage-main-bg.jpg") center center no-repeat #FFCB04;
@@ -113,16 +109,23 @@ homepage
 
 	.skill-circle{
 
-		// height: 140px;
-		padding: 0;
+		@media(max-width: @screen-xs-min){
+			padding: 5px;
+		}
+
+		h3{
+			font-size: ceil((@font-size-small * 0.85));
+		}
 
 		img {
 			background: #fff;
-			border-radius: 100%;
+			border-radius: 50%;
 			border: 1px solid @brand-primary;
-			padding: @padding-large-vertical;
-			width: 72px;
-			height: 72px;
+			width: 100%;
+			height: 100%;
+			max-width: 210px;
+			max-height: 210px;
+			padding: 12.5%;
 		}
 	}
 
@@ -151,7 +154,7 @@ homepage
 			margin-right: @padding-base-horizontal;
 		}
 		cite.author{
-			font-weight: 900;
+			font-weight: @headings-lighter-font-weight;
 		}
 	}
 
@@ -176,6 +179,15 @@ homepage
 		span{
 			font-weight: 900;
 		}
+
+		@media (min-width: @screen-sm-min){
+			display: inline-block;
+			padding: 0 @padding-large-horizontal;
+		}
+	}
+
+	footer{
+		margin-top: ( 4 * @padding-large-vertical);
 	}
 
 	a.icon-social{

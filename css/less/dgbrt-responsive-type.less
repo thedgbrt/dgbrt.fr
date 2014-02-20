@@ -27,6 +27,10 @@
       margin-bottom: (4 * @padding-large-vertical);
     }
   }
+
+  .panel-content{
+    padding: (@line-height-computed / 2) 0 @line-height-computed 0;
+  }
 }
 
 
@@ -34,7 +38,7 @@
 // Responsive type
 // --------------------------------------------------
 @media (min-width: @screen-xs-min){ //480px wide and above
-  
+    #panel-skills .skill-circle h3{ font-size: @font-size-base; }
 }
 
 @media (min-width: @screen-sm-min){ //768px wide and above
@@ -59,6 +63,11 @@
   #panel-main h1{ margin-bottom: @padding-base-vertical; }
   #panel-main .lead{ font-size: (@font-size-base * 2); }
 
+  #panel-skills .skill-circle h3{ font-size: ceil(@font-size-base * 1.25); }
+  #panel-contact .contact-info{ font-size: (@font-size-base * 1.4); }
+  #panel-contact .contact-info i{font-size: 40px;}
+  #panel-contact a.icon-social{width: 55px; height: 55px; padding-top: 14px; i{font-size: 28px}}
+
 }
 
 @media (min-width: @screen-md-min){ // 992px wide and above
@@ -68,9 +77,13 @@
   .lead{ font-size: (@font-size-base * 1.75); }
 
   .home-panel{ padding: (@jumbotron-padding*1.5) 0; }
-  .home-panel .lead{ font-size: (@font-size-base * 1.5); }
+  .home-panel .lead, #panel-contact .contact-info{ font-size: (@font-size-base * 1.5); }
   #panel-main h1{ font-size: @font-size-h1 * 3; }
   #panel-main .lead{ font-size: (@font-size-base * 2.5); }
+
+  #panel-skills .skill-circle h3{ font-size: ceil(@font-size-base * 1.5); }
+  #panel-contact .contact-info i{font-size: 50px;}
+  #panel-contact a.icon-social{width: 66px; height: 66px; padding-top: 17px; i{font-size: 32px}}
 
 }
 
@@ -92,6 +105,6 @@
   .home-panel{ padding: (@jumbotron-padding*2) 0; }
   .home-panel h2, .home-panel .h2{ font-size: (@font-size-h2 * 1.375); }
   #panel-main h1{ font-size: @font-size-h1 * 3.5; }
-  #panel-main .lead{ font-size: (@font-size-base * 3); }
+  #panel-main .lead { font-size: (@font-size-base * 3); }
 
 }
