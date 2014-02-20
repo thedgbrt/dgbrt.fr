@@ -50,33 +50,46 @@ homepage
 	.panel-content{
 
 		position:relative;
-		padding-top: 0;
+		padding-bottom: 0;
+
+		#portfolio-parallax{
+
+			#scene{
+  				max-width: 1200px;
+			}
+
+			img {
+			  display: block;
+			  width: 100%;
+			}
+
+		}
+
+		.btn-wrapper{
+			display:block;
+			position:absolute;
+			top: 50%;
+			margin-top: -20px;
+			width: 100%;
+			text-align:center;
+		}
 
 		.panel-footer-overlay{
 			
-			display:block;
-			position:relative;
-			width: 100%;
+			// display:block;
+			// position:relative;
+			// width: 100%;
 
-			@media (min-width: @screen-sm-min){
-				background: url("../images/homepage/uncompressed/portfolio-bg-1200-empty.jpg") center center no-repeat;
-				min-height: 513px;
-			}
+			// @media (min-width: @screen-sm-min){
+			// 	background: url("../images/homepage/uncompressed/portfolio-bg-1200-empty.jpg") center center no-repeat;
+			// 	min-height: 513px;
+			// }
 	
-			img{
-				max-width: 100%;
-				display: block;
-				margin: 0 auto;
-			}
-			
-			.btn-wrapper{
-				display:block;
-				position:absolute;
-				top: 50%;
-				margin-top: -20px;
-				width: 100%;
-				text-align:center;
-			}
+			// img{
+			// 	max-width: 100%;
+			// 	display: block;
+			// 	margin: 0 auto;
+			// }
 
 		}
 

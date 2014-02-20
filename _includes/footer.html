@@ -6,7 +6,7 @@
     <script src="/js/bootstrap.min.js"></script>
     <script src="/js/breakpoints.js"></script>
     <script src="/js/jquery.smooth-scroll.min.js"></script>
-    <!-- <script src="/js/response.min.js"></script> -->
+    <script src="/js/jquery.parallax.min.js"></script>
     <script src="/js/isotope.pkgd.min.js"></script>
     <script src="/js/holder.js"></script>
     <script src="/js/jquery.equalheights.js"></script>
@@ -30,6 +30,11 @@
         $('[rel="tooltip"]').tooltip();
         // typeAdjustments();
         projectImagesLightbox();
+
+        $('#scene').parallax({
+          scalarX: 10,
+          scalarY: 10
+        });
 
         $('.scroll-for-more').smoothScroll();
 
