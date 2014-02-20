@@ -67,6 +67,12 @@ portfolio-webdesigner
 	    		padding: 10px;
 	    		border-radius:5px;
 	    		width:100%;
+
+	    		&:hover,
+	    		&:focus{
+	    			background-color: @brand-primary;
+	    			border-color: @brand-primary;
+	    		}
 	    	}
 	    	.caption{
 	    		padding:0;
@@ -121,7 +127,7 @@ competences
 	.skill-icon{
 		text-align:center;
 		img{
-			border: 1px solid @gray-lighter;
+			border: 1px solid @brand-primary;
 			border-radius: 100%;
 			padding: 20px;
 		}
