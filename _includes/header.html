@@ -17,7 +17,7 @@
     <meta property="og:description" content="Je conçois des sites élégants et inspirants, avec un oeil particulier apporté au design, à l'ergonomie et et l'expérience utilisateur. Design UI / UX et code front-end html5 / css3."/>
     {% endif %}
     
-    <title>{{ site.name }}</title>
+    <title>{% if page.seo-title %}{{page.seo-title}}{% else %}{{ site.name }}{% endif %}</title>
     
     <!-- Bootstrap core CSS -->
     <link href="/css/bootstrap.custom.min.css" rel="stylesheet">
