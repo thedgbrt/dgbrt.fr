@@ -1,4 +1,36 @@
 {% include header.html %}
-   {{content}}
+<article>
+
+	<header class="jumbotron">
+
+		<div class="container">
+
+			<h1>{{ page.title }}</h1>
+			
+			<p>{{ page.description }}</p>
+			
+			<p>
+				Mission de {% for subcategory in page.subcategories %}{{ subcategory }}{% if forloop.last %} {% else %}, {% endif %}{% endfor %}en {{ page.year }}, {{ page.location }}.
+			</p>
+
+			<p class="project-tags clearfix">
+				{% for tag in page.tags %}<span class="label label-default">{{ tag }}</span> {% endfor %}
+			</p>
+
+		</div>
+
+	</header>
+
+	<section>
+   		
+   		{{content}}
+
+   	</section>
+
+	<footer></footer>
+
+</article>
+
+
 {% include footer-infos.html %}
 {% include footer.html %}
