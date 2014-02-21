@@ -8,8 +8,14 @@
     <!-- parallax on homepage -->
     <meta name="apple-mobile-web-app-capable" content="yes"> 
     
-    <meta name="description" content="">
-    <meta name="author" content="">
+    <meta name="description" content="Je conçois des sites élégants et inspirants, avec un oeil particulier apporté au design, à l'ergonomie et et l'expérience utilisateur. Design UI / UX et code front-end html5 / css3. 
+    ">
+    <meta name="author" content="Dagobert Renouf">
+
+    {% if page.layout == "homepage" %}
+    <meta property="og:image" content="http://www.dgbrt.fr/images/cover-image.jpg"/>
+    <meta property="og:description" content="Je conçois des sites élégants et inspirants, avec un oeil particulier apporté au design, à l'ergonomie et et l'expérience utilisateur. Design UI / UX et code front-end html5 / css3."/>
+    {% endif %}
     
     <title>{{ site.name }}</title>
     
