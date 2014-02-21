@@ -10,7 +10,7 @@
 			<p>{{ page.description }}</p>
 			
 			<p>
-				Mission de {% for subcategory in page.subcategories %}{{ subcategory }}{% if forloop.last %} {% else %}, {% endif %}{% endfor %}en {{ page.year }}, {{ page.location }}.
+				Mission de {% for subcategory in page.subcategories %}{% if subcategory == "integration" %}intégration{% else %}{{ subcategory }}{% endif %}{% if forloop.last %} {% else %}, {% endif %}{% endfor %}en {{ page.year }}, {{ page.location }}.
 			</p>
 
 			<p class="project-tags clearfix">
