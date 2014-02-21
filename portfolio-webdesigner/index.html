@@ -24,19 +24,17 @@ seo-title: Portfolio de webdesigner freelance dgbrt
 
 			<div class="col-sm-10">
 
-				<h5>Filtrer:</h4>
+				<h4>Filtrer par rôle:</h4>
 				
 				<ul class="nav nav-pills" id="project-filters">
 					
 					<!-- <li class="active" data-filter-value="*"><a href="javascript:void(0)">Tout</a></li> -->
 					
-					<li class="active" data-filter-value=".webdesign"><a href="javascript:void(0)">Webdesign</a></li>
+					<li class="active" data-filter-value=".webdesign"><a href="javascript:void(0)">Webdesigner</a></li>
 					
-					<li data-filter-value=".integration"><a href="javascript:void(0)">Intégration</a></li>
+					<li data-filter-value=".integration"><a href="javascript:void(0)">Intégrateur</a></li>
 
-					<li data-filter-value=".vision"><a href="javascript:void(0)">Vision</a></li>
-
-					<li data-filter-value=".prestashop"><a href="javascript:void(0)">Prestashop</a></li>
+					<li data-filter-value=".moa"><a href="javascript:void(0)">Maître d'oeuvre</a></li>
 
 				</ul>
 
@@ -52,7 +50,7 @@ seo-title: Portfolio de webdesigner freelance dgbrt
 
 		<div class="row" id="project-wrapper">
 {% for order in (1..99) %}{% for post in site.categories.portfolio-webdesigner %}{% if post.order == order %}	  			
-  			<div class="project{% for tag in post.tags %} {{ tag }}{% endfor %}" data-category="{% for tag in post.tags %}{{ tag }} {% endfor %}">
+  			<div class="project{% for subcategory in post.subcategories %} {{ subcategory }}{% endfor %}" data-subcategory="{% for subcategory in post.subcategories %}{{ subcategory }} {% endfor %}">
 
   				<div class="thumbnail">
 
@@ -66,6 +64,10 @@ seo-title: Portfolio de webdesigner freelance dgbrt
 						</h3>
 
 						<p>{{ post.description }}</p>
+
+						<p class="project-tags clearfix">
+							{% for tag in post.tags %}<span class="label label-default">{{ tag }}</span>{% endfor %}
+						</p>
 
 					</div>
 
