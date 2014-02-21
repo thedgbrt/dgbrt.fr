@@ -103,12 +103,18 @@ project page
 }
 .project-masonry-images{
 	margin: 0 (@grid-gutter-width / 2);
+	@media(min-width: @screen-lg-min){
+		max-width: (720 * 3); //max size of image in a row of 3
+		margin: 0 auto;
+	}
 }
 
 .project-image{
 	max-width:100%;
 	display:inline-block;
 	margin-bottom: @grid-gutter-width;
+
+
 }
 
 /*
