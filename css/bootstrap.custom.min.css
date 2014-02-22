@@ -3151,7 +3151,6 @@ input[type="button"].btn-block {
   font-size: 75%;
   font-weight: 600;
   line-height: 1;
-  color: #ffffff;
   text-align: center;
   white-space: nowrap;
   vertical-align: baseline;
@@ -3172,59 +3171,67 @@ input[type="button"].btn-block {
 }
 .label-default {
   background-color: #999999;
+  color: #ffffff;
 }
 .label-default[href]:hover,
 .label-default[href]:focus {
-  background-color: #808080;
+  background-color: #e6e6e6;
 }
 .label-primary {
   background-color: #ffcb04;
+  color: #ffffff;
 }
 .label-primary[href]:hover,
 .label-primary[href]:focus {
-  background-color: #d0a500;
+  background-color: #e6e6e6;
 }
 .label-success {
   background-color: #5cb85c;
+  color: #ffffff;
 }
 .label-success[href]:hover,
 .label-success[href]:focus {
-  background-color: #449d44;
+  background-color: #e6e6e6;
 }
 .label-info {
   background-color: #5bc0de;
+  color: #ffffff;
 }
 .label-info[href]:hover,
 .label-info[href]:focus {
-  background-color: #31b0d5;
+  background-color: #e6e6e6;
 }
 .label-warning {
   background-color: #f0ad4e;
+  color: #ffffff;
 }
 .label-warning[href]:hover,
 .label-warning[href]:focus {
-  background-color: #ec971f;
+  background-color: #e6e6e6;
 }
 .label-danger {
   background-color: #d9534f;
+  color: #ffffff;
 }
 .label-danger[href]:hover,
 .label-danger[href]:focus {
-  background-color: #c9302c;
+  background-color: #e6e6e6;
 }
 .label-prestashop {
   background-color: #669900;
+  color: #ffffff;
 }
 .label-prestashop[href]:hover,
 .label-prestashop[href]:focus {
-  background-color: #446600;
+  background-color: #e6e6e6;
 }
 .label-wordpress {
   background-color: #21759b;
+  color: #ffffff;
 }
 .label-wordpress[href]:hover,
 .label-wordpress[href]:focus {
-  background-color: #185571;
+  background-color: #e6e6e6;
 }
 .label-oscommerce {
   background-color: #ffffff;
@@ -3233,7 +3240,7 @@ input[type="button"].btn-block {
 }
 .label-oscommerce[href]:hover,
 .label-oscommerce[href]:focus {
-  background-color: #e6e6e6;
+  background-color: #3c3c3c;
 }
 .badge {
   display: inline-block;

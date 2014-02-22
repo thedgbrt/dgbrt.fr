@@ -8,7 +8,6 @@
   font-size: 75%;
   font-weight: 600;
   line-height: 1;
-  color: @label-color;
   text-align: center;
   white-space: nowrap;
   vertical-align: baseline;
@@ -72,7 +71,6 @@
 }
 
 .label-oscommerce {
-  .label-variant(@label-oscommerce-bg);
-  color: @label-oscommerce-color;
+  .label-variant(@label-oscommerce-bg, @label-oscommerce-color);
   border: 1px solid @label-oscommerce-color;
 }
