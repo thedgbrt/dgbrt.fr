@@ -3799,14 +3799,14 @@ homepage
   margin-bottom: 20px;
 }
 @media (max-width: 480px) {
-  #panel-skills .skill-circle {
+  #panel-skills a.skill-link .skill-circle {
     padding: 5px;
   }
 }
-#panel-skills .skill-circle h3 {
+#panel-skills a.skill-link .skill-circle h3 {
   font-size: 12px;
 }
-#panel-skills .skill-circle img {
+#panel-skills a.skill-link .skill-circle img {
   background: #fff;
   border-radius: 50%;
   border: 1px solid #ffcb04;
@@ -3815,6 +3815,10 @@ homepage
   max-width: 210px;
   max-height: 210px;
   padding: 12.5%;
+}
+#panel-skills a.skill-link:hover .skill-circle img,
+#panel-skills a.skill-link:focus .skill-circle img {
+  border-width: 3px;
 }
 /* testimonies panel */
 #panel-testimonies .testimony {
@@ -4099,7 +4103,7 @@ contact
   }
 }
 @media (min-width: 480px) {
-  #panel-skills .skill-circle h3 {
+  #panel-skills a.skill-link .skill-circle h3 {
     font-size: 16px;
   }
 }
@@ -4161,7 +4165,7 @@ contact
   #panel-main .lead {
     font-size: 32px;
   }
-  #panel-skills .skill-circle h3 {
+  #panel-skills a.skill-link .skill-circle h3 {
     font-size: 20px;
   }
   #panel-contact .contact-info {
@@ -4199,7 +4203,7 @@ contact
   #panel-main .lead {
     font-size: 40px;
   }
-  #panel-skills .skill-circle h3 {
+  #panel-skills a.skill-link .skill-circle h3 {
     font-size: 24px;
   }
   #panel-contact .contact-info i {
