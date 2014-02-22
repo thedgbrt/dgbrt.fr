@@ -3149,7 +3149,7 @@ input[type="button"].btn-block {
   display: inline;
   padding: .2em .6em .3em;
   font-size: 75%;
-  font-weight: bold;
+  font-weight: 600;
   line-height: 1;
   color: #ffffff;
   text-align: center;
@@ -4254,6 +4254,37 @@ contact
   #panel-main .lead {
     font-size: 48px;
   }
+}
+a {
+  -webkit-transition: color 250ms;
+  transition: color 250ms;
+}
+.btn,
+button {
+  -webkit-transition: background-color 250ms;
+  transition: background-color 250ms;
+}
+.btn.scroll-for-more,
+button.scroll-for-more {
+  -webkit-transition: color 250ms;
+  transition: color 250ms;
+}
+#panel-skills a.skill-link .skill-circle img {
+  -webkit-transition: all 250ms;
+  transition: all 250ms;
+}
+#panel-contact a.icon-social {
+  -webkit-transition: background-color 250ms;
+  transition: background-color 250ms;
+}
+.nav-pills li {
+  -webkit-transition: all 250ms;
+  transition: all 250ms;
+}
+#project-wrapper .project .thumbnail img,
+#project-wrapper .project .thumbnail a img {
+  -webkit-transition: all 250ms;
+  transition: all 250ms;
 }
 /* Magnific Popup CSS */
 .mfp-bg {

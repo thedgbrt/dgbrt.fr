@@ -1,0 +1,43 @@
+@transition-duration: 250ms;
+
+a{
+	
+	.transition(color @transition-duration);
+
+}
+
+.btn, button{
+
+	.transition(background-color @transition-duration);
+
+	&.scroll-for-more{
+
+		.transition(color @transition-duration);
+
+	}
+
+}
+
+#panel-skills a.skill-link .skill-circle img{
+
+	.transition(all @transition-duration);
+
+}
+
+#panel-contact a.icon-social{
+
+	.transition(background-color @transition-duration);
+
+}
+
+.nav-pills li{
+
+	.transition(all @transition-duration);
+
+}
+
+#project-wrapper .project .thumbnail img, #project-wrapper .project .thumbnail a img{
+
+	.transition(all @transition-duration);
+
+}
