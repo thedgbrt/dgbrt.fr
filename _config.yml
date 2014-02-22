@@ -1,4 +1,5 @@
 source:      .
 destination: ./_site
+exclude: ['*.less']
 
 name: Webdesigner Freelance et intégrateur html5 / css3 à Lille - Dagobert Renouf
