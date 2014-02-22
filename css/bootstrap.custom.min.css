@@ -3686,11 +3686,13 @@ footer.main {
 /* layouts */
 /* ------ */
 #default .jumbotron,
-#portfolio .jumbotron {
+#portfolio .jumbotron,
+#skills .jumbotron {
   background: url(../images/patt-custom-4c.jpg) fixed;
 }
 #default .navbar-blend-top,
-#portfolio .navbar-blend-top {
+#portfolio .navbar-blend-top,
+#skills .navbar-blend-top {
   background: url(../images/patt-custom-4c.jpg) fixed;
 }
 #homepage .navbar-brand > a:hover,
