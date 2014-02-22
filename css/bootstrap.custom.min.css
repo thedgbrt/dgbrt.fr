@@ -4232,9 +4232,9 @@ contact
     font-weight: 300;
   }
   .btn-dgbrt.scroll-for-more {
-    padding: 25px 40px;
+    padding: 22.5px 36px;
     font-size: 32px;
-    line-height: 2.5;
+    line-height: 2.14285714;
     border-radius: 12px;
   }
   .home-panel {
