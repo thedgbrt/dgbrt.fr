@@ -4256,35 +4256,35 @@ contact
   }
 }
 a {
-  -webkit-transition: color 250ms;
-  transition: color 250ms;
+  -webkit-transition: color 150ms;
+  transition: color 150ms;
 }
 .btn,
 button {
-  -webkit-transition: background-color 250ms;
-  transition: background-color 250ms;
+  -webkit-transition: background-color 150ms;
+  transition: background-color 150ms;
 }
 .btn.scroll-for-more,
 button.scroll-for-more {
-  -webkit-transition: color 250ms;
-  transition: color 250ms;
+  -webkit-transition: color 150ms;
+  transition: color 150ms;
 }
 #panel-skills a.skill-link .skill-circle img {
-  -webkit-transition: all 250ms;
-  transition: all 250ms;
+  -webkit-transition: all 150ms;
+  transition: all 150ms;
 }
 #panel-contact a.icon-social {
-  -webkit-transition: background-color 250ms;
-  transition: background-color 250ms;
+  -webkit-transition: background-color 150ms;
+  transition: background-color 150ms;
 }
 .nav-pills li {
-  -webkit-transition: all 250ms;
-  transition: all 250ms;
+  -webkit-transition: all 150ms;
+  transition: all 150ms;
 }
 #project-wrapper .project .thumbnail img,
 #project-wrapper .project .thumbnail a img {
-  -webkit-transition: all 250ms;
-  transition: all 250ms;
+  -webkit-transition: all 150ms;
+  transition: all 150ms;
 }
 /* Magnific Popup CSS */
 .mfp-bg {
