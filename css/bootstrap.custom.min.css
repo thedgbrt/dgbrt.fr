@@ -3212,6 +3212,29 @@ input[type="button"].btn-block {
 .label-danger[href]:focus {
   background-color: #c9302c;
 }
+.label-prestashop {
+  background-color: #669900;
+}
+.label-prestashop[href]:hover,
+.label-prestashop[href]:focus {
+  background-color: #446600;
+}
+.label-wordpress {
+  background-color: #21759b;
+}
+.label-wordpress[href]:hover,
+.label-wordpress[href]:focus {
+  background-color: #185571;
+}
+.label-oscommerce {
+  background-color: #ffffff;
+  color: #555555;
+  border: 1px solid #555555;
+}
+.label-oscommerce[href]:hover,
+.label-oscommerce[href]:focus {
+  background-color: #e6e6e6;
+}
 .badge {
   display: inline-block;
   min-width: 10px;

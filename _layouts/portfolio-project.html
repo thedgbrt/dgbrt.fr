@@ -14,7 +14,7 @@
 			</p>
 
 			<p class="project-tags clearfix">
-				{% for tag in page.tags %}<span class="label label-default">{{ tag }}</span> {% endfor %}
+				{% for tag in page.tags %}<span class="label {% case tag %}{% when "prestashop" %}label-prestashop{% when "wordpress" %}label-wordpress{% when "oscommerce" %}label-oscommerce{% else %}label-default{% endcase %}">{{ tag }}</span> {% endfor %}
 			</p>
 
 		</div>
