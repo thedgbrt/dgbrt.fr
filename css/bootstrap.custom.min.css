@@ -3663,6 +3663,64 @@ td.visible-print {
     display: none !important;
   }
 }
+/* fontastic custom icon fonts */
+/* Just click to select the code */
+@charset "UTF-8";
+@font-face {
+  font-family: "fontastic";
+  src: url("../fonts/fontastic.eot");
+  src: url("../fonts/fontastic.eot?#iefix") format("embedded-opentype"), url("../fonts/fontastic.ttf") format("truetype"), url("../fonts/fontastic.svg#fontastic") format("svg"), url("../fonts/fontastic.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+[data-icon]:before {
+  font-family: "fontastic" !important;
+  content: attr(data-icon);
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  speak: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+[class^="icon-"]:before,
+[class*=" icon-"]:before {
+  font-family: "fontastic" !important;
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  speak: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.icon-fa-github-alt:before {
+  content: "f";
+}
+.icon-fa-twitter:before {
+  content: "g";
+}
+.icon-fa-linkedin:before {
+  content: "h";
+}
+.icon-fa-google-plus:before {
+  content: "b";
+}
+.icon-fa-facebook:before {
+  content: "i";
+}
+.icon-fa-chevron-down:before {
+  content: "e";
+}
+.icon-fa-mobile:before {
+  content: "c";
+}
+.icon-fa-enveloppe:before {
+  content: "d";
+}
 /* ------ */
 /* global */
 /* ------ */
@@ -3797,6 +3855,9 @@ homepage
 #panel-main .scroll-for-more:hover {
   color: #fff;
 }
+#panel-main .scroll-for-more i {
+  vertical-align: middle;
+}
 /* portfolio panel */
 #panel-portfolio .panel-content {
   position: relative;
@@ -3891,9 +3952,13 @@ homepage
 #panel-contact .contact-info i {
   font-size: 32px;
   margin-right: 5px;
+  padding-top: 5px;
 }
 #panel-contact .contact-info span {
   font-weight: 900;
+}
+#panel-contact .contact-info .icon-fa-mobile {
+  margin-right: -5px;
 }
 @media (min-width: 768px) {
   #panel-contact .contact-info {
@@ -3912,7 +3977,7 @@ homepage
   margin-right: 5px;
   border: 0;
   border-radius: 50%;
-  padding-top: 13px;
+  padding-top: 11px;
 }
 #panel-contact a.icon-social i {
   font-size: 24px;
@@ -4207,7 +4272,7 @@ contact
   #panel-contact a.icon-social {
     width: 55px;
     height: 55px;
-    padding-top: 14px;
+    padding-top: 12px;
   }
   #panel-contact a.icon-social i {
     font-size: 28px;
@@ -4238,11 +4303,15 @@ contact
   }
   #panel-contact .contact-info i {
     font-size: 50px;
+    padding-top: 8px;
+  }
+  #panel-contact .contact-info .icon-fa-enveloppe {
+    margin-right: 10px;
   }
   #panel-contact a.icon-social {
     width: 66px;
     height: 66px;
-    padding-top: 17px;
+    padding-top: 15px;
   }
   #panel-contact a.icon-social i {
     font-size: 32px;
