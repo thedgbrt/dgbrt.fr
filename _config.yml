@@ -2,5 +2,7 @@ source:      .
 destination: ./_site
 exclude: ['*.less']
 
+url: http://www.dgbrt.fr
+
 name: Webdesigner Freelance et int&eacute;grateur html5 / css3 &agrave; Lille - Dagobert Renouf
 permalink: none
