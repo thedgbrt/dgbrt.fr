@@ -1,7 +1,7 @@
 # Design + code
 Je suis webdesigner et intégrateur freelance
 
-J'interviens entant que webdesigner, designer ui / ux et intégrateur front-end auprès d'agences de graphisme, de communication et directement en entreprise.
+J'interviens entant que webdesigner, designer ui / ux et intégrateur front-end auprwès d'agences de graphisme, de communication et directement en entreprise.
 
 ## ma vision
 
