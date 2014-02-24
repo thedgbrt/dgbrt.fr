@@ -1,6 +1,6 @@
 source:      .
 destination: ./_site
-exclude: ['*.less']
+exclude: ['*.less', 'node_modules']
 
 url: http://www.dgbrt.fr
 
