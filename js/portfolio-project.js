@@ -14,8 +14,8 @@ function projectImagesMasonry(){
 	var $container = $('.project-masonry-images');
 	// initialize
 	$container.masonry({
-	columnWidth: '.project-image',
-	itemSelector: '.project-image'
+		columnWidth: '.project-image',
+		itemSelector: '.project-image'
 	});
 }
 
