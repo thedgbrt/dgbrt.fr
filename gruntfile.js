@@ -33,7 +33,7 @@ module.exports = function(grunt) {
       options: {
         htmlroot: '_site',
         media: ['print', 'min-width: 480px', 'min-width: 768px', 'max-width: 767px', 'min-width: 992px', 'max-width: 991px', 'min-width: 1200px', 'max-width: 1199px'],
-        ignore: ['.collapse', '.collapse.in', '.collapsing', '.row']
+        ignore: ['.collapse', '.collapse.in', '.collapsing', '.row'] //collapse.in is super important for navbar
       }
     },
 
@@ -43,10 +43,10 @@ module.exports = function(grunt) {
           'css/bootstrap-custom.min.css': ['css/bootstrap-custom.min.css'
                                           ,'css/bootstrap-grid.css' // put the bootstrap grid out of uncss, or it destroys capital features
                                           ,'css/dgbrt-all.css'
-                                          ,'css/magnific-popup.css'
-                                          ,'css/owl.carousel.css'
-                                          ,'css/owl.theme.css'
-                                          ,'css/owl.transitions.css']
+                                          ,'css/lib/magnific-popup.css'
+                                          ,'css/lib/owl.carousel.css'
+                                          ,'css/lib/owl.theme.css'
+                                          ,'css/lib/owl.transitions.css']
         }
       }
     }
