@@ -6,3 +6,8 @@ url: http://www.dgbrt.fr
 
 name: Webdesigner Freelance &agrave; Lille, int&eacute;grateur front-end, Dagobert Renouf
 permalink: none
+
+sitemap:
+    file: "/sitemap.xml"
+    exclude:
+        - "/404.html"
