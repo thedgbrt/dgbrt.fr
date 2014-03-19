@@ -180,8 +180,8 @@ homepage
   height: 100%;
 }
 #panel-main h1 {
-  font-family: "abril-fatface-1";
-  font-weight: normal;
+  font-family: "Playfair Display", Georgia, Times, serif;
+  font-weight: 900;
   text-transform: uppercase;
 }
 #panel-main .scroll-for-more {
@@ -602,7 +602,7 @@ vision
     padding: 37.5px 0;
   }
   #panel-main h1 {
-    font-size: 92.25px;
+    font-size: 88.15px;
   }
   #panel-main h1 {
     margin-bottom: 6px;
@@ -643,7 +643,7 @@ vision
     font-size: 24px;
   }
   #panel-main h1 {
-    font-size: 123px;
+    font-size: 112.75px;
   }
   #panel-main .lead {
     font-size: 40px;
@@ -698,7 +698,7 @@ vision
     font-size: 44px;
   }
   #panel-main h1 {
-    font-size: 143.5px;
+    font-size: 133.25px;
   }
   #panel-main .lead {
     font-size: 48px;

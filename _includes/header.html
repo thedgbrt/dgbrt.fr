@@ -22,20 +22,7 @@
     <link href="/css/bootstrap-custom.min.css" rel="stylesheet">
     
     <!-- Google fonts -->
-    <link href='http://fonts.googleapis.com/css?family=Open+Sans:800,600,300,400' rel='stylesheet' type='text/css'>
-
-    {% if page.layout == "homepage" %}
-    <!-- Typekit fonts -->
-    <script type="text/javascript">
-      (function(d) {
-        var config = {
-          kitId: 'lud5jxd',
-          scriptTimeout: 3000
-        },
-        h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='//use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
-      })(document);
-    </script>
-    {% endif %}
+    <link href='http://fonts.googleapis.com/css?family={% if page.layout == "homepage" %}Playfair+Display:900|{% endif %}Open+Sans:800,600,300,400' rel='stylesheet' type='text/css'>
 
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
