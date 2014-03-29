@@ -5,6 +5,11 @@ module.exports = function(grunt) {
 
     pkg: grunt.file.readJSON('package.json'),
 
+    watch: {
+      files: ['a-propos/*', 'competences/*', 'contact/*', 'credits/*', 'css/*.less', 'js/*', 'portfolio-webdesigner/*', 'index.html'],
+      tasks: ['default'],
+    },
+
     jekyll: {
       prod: {
         src: '',
@@ -60,9 +65,11 @@ module.exports = function(grunt) {
 
   });
   
+  // watch changes
+  grunt.loadNpmTasks('grunt-contrib-watch');
+
   // jekyll build
   grunt.loadNpmTasks('grunt-jekyll');
-
   // less
   grunt.loadNpmTasks('grunt-contrib-less');
   // uncss
@@ -71,7 +78,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-cssmin');
 
   // Default task(s).
-  grunt.registerTask('default', ['less', 'cssmin', 'jekyll']);
+  grunt.registerTask('default', ['less', 'cssmin', 'jekyll', 'watch']);
   // for production, use this: grunt.registerTask('default', ['less', 'uncss', 'cssmin', 'jekyll']);
 
 };
