@@ -6,7 +6,7 @@ module.exports = function(grunt) {
     pkg: grunt.file.readJSON('package.json'),
 
     watch: {
-      files: ['a-propos/*', 'competences/*', 'contact/*', 'credits/*', 'css/*.less', 'js/*', 'portfolio-webdesigner/*', 'index.html'],
+      files: ['a-propos/*', 'competences/*', 'contact/*', 'credits/*', 'css/less/*.less', 'js/*', 'portfolio-webdesigner/*', 'index.html'],
       tasks: ['default'],
     },
 

@@ -189,7 +189,9 @@ homepage
   background: rgba(255, 203, 4, 0.75);
 }
 #panel-main .scroll-for-more:hover {
-  color: #fff;
+  background: rgba(255, 255, 255, 0.85);
+  border: rgba(255, 255, 255, 0.85);
+  color: #ffcb04;
 }
 #panel-main .scroll-for-more i {
   vertical-align: middle;
@@ -715,8 +717,8 @@ button {
 }
 .btn.scroll-for-more,
 button.scroll-for-more {
-  -webkit-transition: color 150ms;
-  transition: color 150ms;
+  -webkit-transition: all 150ms;
+  transition: all 150ms;
 }
 #panel-skills a.skill-link .skill-circle img {
   -webkit-transition: all 150ms;
