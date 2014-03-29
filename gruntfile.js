@@ -5,6 +5,13 @@ module.exports = function(grunt) {
 
     pkg: grunt.file.readJSON('package.json'),
 
+    jekyll: {
+      prod: {
+        src: '',
+        dest: '_site'
+      }
+    },
+
     less: {
       development: {
         options: {
@@ -52,6 +59,9 @@ module.exports = function(grunt) {
     }
 
   });
+  
+  // jekyll build
+  grunt.loadNpmTasks('grunt-jekyll');
 
   // less
   grunt.loadNpmTasks('grunt-contrib-less');
@@ -61,6 +71,6 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-cssmin');
 
   // Default task(s).
-  grunt.registerTask('default', ['less', 'uncss', 'cssmin']);
+  grunt.registerTask('default', ['less', 'cssmin', 'jekyll']);
 
 };
