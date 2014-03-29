@@ -61,6 +61,24 @@ module.exports = function(grunt) {
                                           ,'css/lib/owl.transitions.css']
         }
       }
+    },
+
+    uglify: {
+      my_target: {
+        files: {
+          'js/pages/homepage.min.js': ['js/jquery.smooth-scroll.min.js'
+                                      , 'js/jquery.parallax.min.js'
+                                      , 'js/owl.carousel.min.js'
+                                      , 'js/homepage.js'],
+          'js/pages/portfolio-project.min.js': ['js/jquery.magnific-popup.custom-fork.js'
+                                      , 'js/isotope.pkgd.min.js'
+                                      , 'js/portfolio-project.js'],
+          'js/pages/portfolio.min.js': ['js/isotope.pkgd.min.js'
+                                      , 'js/portfolio.js'],
+          'js/pages/skills.min.js': ['js/jquery.equalheights.js'
+                                      , 'js/skills.js']
+        }
+      }
     }
 
   });
@@ -76,9 +94,11 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-uncss');
   // css minification
   grunt.loadNpmTasks('grunt-contrib-cssmin');
+  // js compilation
+  grunt.loadNpmTasks('grunt-contrib-uglify');
 
   // Default task(s).
-  grunt.registerTask('default', ['less', 'cssmin', 'jekyll', 'watch']);
-  // for production, use this: grunt.registerTask('default', ['less', 'uncss', 'cssmin', 'jekyll']);
+  // for production, use this:
+  grunt.registerTask('default', ['less', 'uncss', 'cssmin', 'uglify', 'jekyll']);
 
 };
