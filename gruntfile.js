@@ -72,5 +72,6 @@ module.exports = function(grunt) {
 
   // Default task(s).
   grunt.registerTask('default', ['less', 'cssmin', 'jekyll']);
+  // for production, use this: grunt.registerTask('default', ['less', 'uncss', 'cssmin', 'jekyll']);
 
 };
