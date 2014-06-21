@@ -73,6 +73,12 @@
    content: "d"; 
 }
 
+.icon-fontawesome-webfont:before {
+  content: "e";
+}
+.icon-fontawesome-webfont-1:before {
+  content: "a";
+}
 
 /* ------ */
 /* global */
@@ -116,8 +122,14 @@ html, body{ // allows for full screen panels
   	}
 }
 
-.navbar-nav>li.lang>a{ // special styling for language selection on the right
-	padding-left: 20px !important;
+.navbar-nav>li.lang{
+	i{
+		position: relative;
+		top: 2px;
+	}
+	>a{ // special styling for language selection on the right
+		padding-left: 30px;
+	}
 }
 
 

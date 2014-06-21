@@ -56,6 +56,12 @@
 .icon-fa-enveloppe:before {
   content: "d";
 }
+.icon-fontawesome-webfont:before {
+  content: "e";
+}
+.icon-fontawesome-webfont-1:before {
+  content: "a";
+}
 /* ------ */
 /* global */
 /* ------ */
@@ -93,8 +99,12 @@ body {
     text-decoration: underline;
   }
 }
+.navbar-nav > li.lang i {
+  position: relative;
+  top: 2px;
+}
 .navbar-nav > li.lang > a {
-  padding-left: 20px !important;
+  padding-left: 30px;
 }
 /* footer */
 footer.main {
@@ -197,8 +207,8 @@ homepage
   background: url("../images/homepage-main-bg.jpg") center center no-repeat #ffcb04;
   background-size: contain;
   position: relative;
-  margin-top: -68px;
-  padding-top: 68px;
+  margin-top: -88px;
+  padding-top: 88px;
   height: 100%;
 }
 #panel-main h1 {
