@@ -1,0 +1,36 @@
+{% include header-en.html %}
+<article>
+
+	<header class="jumbotron">
+
+		<div class="container">
+
+			<h1>{{ page.title }}</h1>
+			
+			<p>{{ page.description }}</p>
+			
+			<p>
+				Mission : {% for subcategory in page.subcategories %}{{ subcategory }}{% if forloop.last %} {% else %}, {% endif %}{% endfor %}in {{ page.location }}, {{ page.year }}.
+			</p>
+
+			<p class="project-tags clearfix">
+				{% for tag in page.tags %}<span class="label {% case tag %}{% when "prestashop" %}label-prestashop{% when "wordpress" %}label-wordpress{% when "oscommerce" %}label-oscommerce{% else %}label-default{% endcase %}">{{ tag }}</span> {% endfor %}
+			</p>
+
+		</div>
+
+	</header>
+
+	<section>
+   		
+   		{{content}}
+
+   	</section>
+
+	<footer></footer>
+
+</article>
+
+
+{% include footer-infos-en.html %}
+{% include footer.html %}

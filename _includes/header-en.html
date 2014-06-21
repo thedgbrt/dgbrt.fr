@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,21 +8,21 @@
     <!-- parallax on homepage -->
     <meta name="apple-mobile-web-app-capable" content="yes"> 
     
-    <meta name="description" content="{% if page.seo-description %}{{page.seo-description}}{% else %}{{ site.description }}{% endif %}">
+    <meta name="description" content="{% if page.seo-description %}{{page.seo-description}}{% else %}{{ site.description_en }}{% endif %}">
     <meta name="author" content="Dagobert Renouf">
 
-    {% if page.layout == "homepage" %}
+    {% if page.layout == "homepage-en" %}
     <meta property="og:image" content="http://www.dgbrt.fr/images/cover-image.jpg"/>
     {% endif %}
-    <meta property="og:description" content="{% if page.seo-description %}{{page.seo-description}}{% else %}{{ site.description }}{% endif %}"/>
+    <meta property="og:description" content="{% if page.seo-description %}{{page.seo-description}}{% else %}{{ site.description_en }}{% endif %}"/>
     
-    <title>{% if page.seo-title %}{{page.seo-title}}{% else %}{{ site.name }}{% endif %}</title>
+    <title>{% if page.seo-title %}{{page.seo-title}}{% else %}{{ site.name_en }}{% endif %}</title>
     
     <!-- Bootstrap custom CSS full -->
     <link href="/css/bootstrap-custom.min.css" rel="stylesheet">
     
     <!-- Google fonts -->
-    <link href='http://fonts.googleapis.com/css?family={% if page.layout == "homepage" %}Playfair+Display:900|{% endif %}Open+Sans:800,600,300,400' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family={% if page.layout == "homepage-en" %}Playfair+Display:900|{% endif %}Open+Sans:800,600,300,400' rel='stylesheet' type='text/css'>
 
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -48,12 +48,12 @@
 
         <span class="logo navbar-brand">
       
-          <a id="logo" href="/">
+          <a id="logo" href="/en">
       
             <span class="logo-img"></span>
             <span class="logo-label">
               Dagobert Renouf<br>
-              <strong>Webdesigner&nbsp;Freelance</strong>
+              <strong>Webdesigner &amp; Project Manager</strong>
             </span>
       
           </a>
@@ -66,12 +66,12 @@
       
         <ul class="nav navbar-nav navbar-right">
       
-          <li><a href="/a-propos">&Agrave; Propos</a></li>
-          <li><a href="/portfolio-webdesigner">Portfolio</a></li>
-          <li><a href="/competences">Comp&eacute;tences</a></li>
-          <li><a href="/cv">C.V</a></li>
-          <li><a href="/contact">Contact</a></li>
-          <li class="lang"><a href="/en">En / <strong>Fr</strong></a></li>
+          <li><a href="/en/vision">Vision</a></li>
+          <li><a href="/en/webdesigner-portfolio">Portfolio</a></li>
+          <li><a href="/en/skills">Skills</a></li>
+          <li><a href="/en/experiences">Experiences</a></li>
+          <li><a href="/en/contact">Contact</a></li>
+          <li class="lang"><a href="/"><strong>En</strong> / Fr</a></li>
       
         </ul>
       
