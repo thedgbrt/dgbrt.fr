@@ -207,8 +207,8 @@ homepage
   background: url("../images/homepage-main-bg.jpg") center center no-repeat #ffcb04;
   background-size: contain;
   position: relative;
-  margin-top: -88px;
-  padding-top: 88px;
+  margin-top: -68px;
+  padding-top: 68px;
   height: 100%;
 }
 #panel-main h1 {
@@ -483,6 +483,13 @@ project page
 /*
 competences
 */
+@media (min-width: 992px) {
+  #skills-main {
+    padding-bottom: 40px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #d9d9d9;
+  }
+}
 .skill {
   position: relative;
   min-height: 1px;
@@ -517,6 +524,13 @@ competences
   border: 1px solid #ffcb04;
   border-radius: 100%;
   padding: 20px;
+}
+.experience-item {
+  margin-bottom: 20px;
+}
+.experience-item h5 {
+  margin-bottom: 0;
+  font-weight: 600;
 }
 /*
 contact

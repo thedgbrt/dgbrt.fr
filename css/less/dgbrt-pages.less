@@ -129,6 +129,13 @@ project page
 /*
 competences
 */
+#skills-main{
+	@media(min-width: @screen-md){
+		padding-bottom: (4 * @padding-large-vertical);
+		margin-bottom: (2 * @padding-large-vertical);
+		border-bottom: 1px solid @gray-lighter-alt;
+	}
+}
 .skill{
 	@media(min-width: @screen-xs) and (max-width: @screen-md) {
 		.make-xs-column(6);
@@ -146,6 +153,13 @@ competences
 			border-radius: 100%;
 			padding: 20px;
 		}
+	}
+}
+.experience-item{
+	margin-bottom: (2 * @padding-large-vertical);
+	h5{
+		margin-bottom: 0;
+		font-weight: 600;
 	}
 }
 
