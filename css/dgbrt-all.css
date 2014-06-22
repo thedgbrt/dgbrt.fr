@@ -99,12 +99,27 @@ body {
     text-decoration: underline;
   }
 }
-.navbar-nav > li.lang i {
-  position: relative;
-  top: 2px;
+.navbar-nav > li.lang > a i {
+  display: none;
 }
-.navbar-nav > li.lang > a {
-  padding-left: 30px;
+.navbar-nav > li.lang > a .short-label {
+  display: none;
+}
+@media (min-width: 768px) {
+  .navbar-nav > li.lang > a {
+    padding-left: 30px;
+  }
+  .navbar-nav > li.lang > a i {
+    position: relative;
+    top: 2px;
+    display: inline;
+  }
+  .navbar-nav > li.lang > a .short-label {
+    display: inline;
+  }
+  .navbar-nav > li.lang > a .long-label {
+    display: none;
+  }
 }
 /* footer */
 footer.main {

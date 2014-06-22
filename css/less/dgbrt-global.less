@@ -123,14 +123,34 @@ html, body{ // allows for full screen panels
 }
 
 .navbar-nav>li.lang{
-	i{
-		position: relative;
-		top: 2px;
-	}
 	>a{ // special styling for language selection on the right
-		padding-left: 30px;
+		i{
+			display: none;
+		}
+		.short-label{
+			display: none;
+		}
+
+	}
+	@media (min-width: @screen-sm-min) {
+		>a{
+			padding-left: 30px;
+			i{
+				position: relative;
+				top: 2px;
+				display: inline;
+			}
+
+			.short-label{
+				display: inline;
+			}
+			.long-label{
+				display: none;
+			}
+		}
 	}
 }
+
 
 
 /* footer */
