@@ -1,0 +1,24 @@
+<?php
+
+// if the user actively chooses the french language, set cookie
+if($_GET['set_lang'] == 'fr'){
+	//définition de la durée du cookie (1 an)
+	$expire = 365*24*3600; 
+	setcookie('lang', 'fr', time() + $expire, '/'); 
+}
+else{ // if the user simply lands on the french homepage without having selected that language
+	if(!isset($_COOKIE['lang'])) {
+		// get language
+		$lang = substr($_SERVER['HTTP_ACCEPT_LANGUAGE'],0,2);
+		
+		if($lang != 'fr')
+			header('Location: /en?set_lang=en'); // redirects him if he's not actually french speaking
+	}
+	else{
+		if($_COOKIE['lang'] == 'en'){
+			header('Location: /en'); // he had already picked the english language previously? take him there!
+		}
+	}
+}
+
+?>

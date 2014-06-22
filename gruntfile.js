@@ -99,7 +99,7 @@ module.exports = function(grunt) {
 
   // Default task(s).
   // for production, use this:
-  grunt.registerTask('default', ['less', 'cssmin', 'jekyll']);
-  // grunt.registerTask('default', ['less', 'uncss', 'cssmin', 'uglify', 'jekyll']);
+  // grunt.registerTask('default', ['less', 'cssmin', 'jekyll']);
+  grunt.registerTask('default', ['less', 'uncss', 'cssmin', 'uglify', 'jekyll']);
 
 };
