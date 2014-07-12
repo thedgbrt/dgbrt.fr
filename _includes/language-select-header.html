@@ -1,0 +1,23 @@
+<?php
+// get language code
+$lang = substr($_SERVER['HTTP_ACCEPT_LANGUAGE'],0,2);
+
+$expire = 365*24*3600; 
+
+if($_GET['set_lang'] == 'en'){
+	setcookie('lang', 'en', time() + $expire, '/'); 
+}
+else{
+	if(!isset($_COOKIE['lang'])) {
+			
+		
+		
+		if($lang == 'fr')
+			header('Location: /en?set_lang=en');
+
+	}
+	else if($_COOKIE['lang'] == 'fr')
+		header('Location: /');
+}
+
+?>

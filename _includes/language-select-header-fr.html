@@ -1,0 +1,11 @@
+<?php
+// get language code
+$lang = substr($_SERVER['HTTP_ACCEPT_LANGUAGE'],0,2);
+
+if($_COOKIE['language-selected'] != 'yes') {
+	if($lang != 'fr'){
+		echo "<p>Hello, it looks like you might be more of an english speaker. If you prefer, you can see the <a href='/en'>english version</a> of my site instead.</p><p><a href='#'>Dismiss</a></p>";
+		setcookie('language-selected', 'yes', time() + $expire, '/'); 
+	}
+}
+?>
