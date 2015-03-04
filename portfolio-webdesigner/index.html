@@ -49,7 +49,7 @@ seo-description: Présentation de tous les projets de webdesign, intégration et
 
 		<div class="row" id="project-wrapper">
 {% for order in (1..99) %}{% for post in site.categories.portfolio-webdesigner %}{% if post.order == order %}	  			
-  			<div class="project{% for subcategory in post.subcategories %} {{ subcategory }}{% endfor %}" data-subcategory="{% for subcategory in post.subcategories %}{{ subcategory }} {% endfor %}">
+  			<div class="project{% for tag in post.tags %} {{ tag }}{% endfor %}" data-tag="{% for tag in post.tags %}{{ tag }} {% endfor %}">
 
   				<div class="thumbnail">
 
