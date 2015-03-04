@@ -38,14 +38,14 @@ module.exports = function(grunt) {
                                               , '_site/cv/index.html'
                                               , '_site/competences/index.html'
                                               , '_site/portfolio-webdesigner/index.html'
-                                              , '_site/portfolio-webdesigner/_posts/*.html'
+                                              , '_site/portfolio-webdesigner/locomotion.html'
                                               , '_site/contact/index.html']
         }
       },
       options: {
         htmlroot: '_site',
         media: ['print', 'min-width: 480px', 'min-width: 768px', 'max-width: 767px', 'min-width: 992px', 'max-width: 991px', 'min-width: 1200px', 'max-width: 1199px'],
-        ignore: ['.collapse', '.collapse.in', '.collapsing', '.row'] //collapse.in is super important for navbar
+        ignore: ['.collapse', '.collapse.in', '.collapsing', '.row', '.btn-primary'] //collapse.in is super important for navbar
       }
     },
 
