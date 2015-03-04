@@ -9,10 +9,10 @@
 			
 			<p>{{ page.description }}</p>
 			
-			<p>
-				Mission : {% for subcategory in page.subcategories %}{{ subcategory }}{% if forloop.last %} {% else %}, {% endif %}{% endfor %}in {{ page.location }}, {{ page.year }}.
+			<!-- <p>
+				In {{ page.location }}, {{ page.year }}.
 			</p>
-
+ -->
 			<p>
 				{% if page.link-url %}<a href="{{ page.link-url }}" class="btn btn-primary btn-lg" target="_blank">Go to website</a>{% endif %}
 			</p>
