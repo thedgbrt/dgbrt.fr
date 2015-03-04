@@ -4,3 +4,6 @@ jekyll_resources.md
 .htaccess
 robots.txt
 node_modules/
+.DS_Store
+css/
+!css/less/*
