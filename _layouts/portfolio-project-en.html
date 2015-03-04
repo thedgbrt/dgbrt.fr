@@ -13,8 +13,8 @@
 				Mission : {% for subcategory in page.subcategories %}{{ subcategory }}{% if forloop.last %} {% else %}, {% endif %}{% endfor %}in {{ page.location }}, {{ page.year }}.
 			</p>
 
-			<p class="project-tags clearfix">
-				{% for tag in page.tags %}<span class="label {% case tag %}{% when "prestashop" %}label-prestashop{% when "wordpress" %}label-wordpress{% when "oscommerce" %}label-oscommerce{% else %}label-default{% endcase %}">{{ tag }}</span> {% endfor %}
+			<p>
+				{% if page.link-url %}<a href="{{ page.link-url }}" class="btn btn-primary btn-lg" target="_blank">Go to website</a>{% endif %}
 			</p>
 
 		</div>

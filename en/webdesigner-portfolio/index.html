@@ -29,13 +29,11 @@ seo-description: Presentation of all webdesign projects, front-end development a
 				
 				<ul class="nav nav-pills" id="project-filters">
 					
-					<!-- <li class="active" data-filter-value="*"><a href="javascript:void(0)">Tout</a></li> -->
-					
-					<li class="active" data-filter-value=".webdesign"><a href="javascript:void(0)">Webdesigner</a></li>
-					
-					<li data-filter-value=".front-end-development"><a href="javascript:void(0)">Front-end developer</a></li>
+					<li class="active" data-filter-value="*"><a href="javascript:void(0)">All</a></li>
 
-					<li data-filter-value=".project-management"><a href="javascript:void(0)">Project Manager</a></li>
+					{% for tag in site.tags %}
+					<li data-filter-value=".{{ tag | first | slugify }}"><a href="javascript:void(0)">{{ tag[0] | replace:'-', ' ' }}</a></li>
+					{% endfor %}
 
 				</ul>
 
@@ -43,7 +41,7 @@ seo-description: Presentation of all webdesign projects, front-end development a
 
 			<div class="col-sm-2">
 
-				<p id="project-count"><span>9</span> projects.</p>
+				<p id="project-count"><span>11</span> projects.</p>
 
 			</div>
 
@@ -51,7 +49,7 @@ seo-description: Presentation of all webdesign projects, front-end development a
 
 		<div class="row" id="project-wrapper">
 {% for order in (1..99) %}{% for post in site.categories.webdesigner-portfolio %}{% if post.order == order %}	  			
-  			<div class="project{% for subcategory in post.subcategories %} {{ subcategory }}{% endfor %}" data-subcategory="{% for subcategory in post.subcategories %}{{ subcategory }} {% endfor %}">
+  			<div class="project {% for tag in post.tags %}{{ tag | slugify }} {% endfor %}" data-subcategory="{% for tag in post.tags %}{{ tag | slugify }} {% endfor %}">
 
   				<div class="thumbnail">
 

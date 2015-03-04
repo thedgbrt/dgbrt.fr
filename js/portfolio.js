@@ -11,7 +11,7 @@ function portfolioIsotope(){
 	// options
 		itemSelector: '.project',
 		layoutMode: 'fitRows',
-		filter: '.webdesign',
+		filter: '*',
 		getSortData: {
 		  date: '.date'
 		},

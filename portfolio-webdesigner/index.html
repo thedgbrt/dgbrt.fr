@@ -25,17 +25,15 @@ seo-description: Présentation de tous les projets de webdesign, intégration et
 
 			<div class="col-sm-10">
 
-				<h4>Filtrer par rôle:</h4>
+				<h4>Filtrer par mot-cl&eacute;:</h4>
 				
 				<ul class="nav nav-pills" id="project-filters">
-					
-					<!-- <li class="active" data-filter-value="*"><a href="javascript:void(0)">Tout</a></li> -->
-					
-					<li class="active" data-filter-value=".webdesign"><a href="javascript:void(0)">Webdesigner</a></li>
-					
-					<li data-filter-value=".integration"><a href="javascript:void(0)">Intégrateur</a></li>
+										
+					<li class="active" data-filter-value="*"><a href="javascript:void(0)">Tout</a></li>
 
-					<li data-filter-value=".moa"><a href="javascript:void(0)">Maître d'oeuvre</a></li>
+					{% for tag in site.tags %}
+					<li data-filter-value=".{{ tag | first | slugify }}"><a href="javascript:void(0)">{{ tag[0] | replace:'-', ' ' }}</a></li>
+					{% endfor %}
 
 				</ul>
 
@@ -43,7 +41,7 @@ seo-description: Présentation de tous les projets de webdesign, intégration et
 
 			<div class="col-sm-2">
 
-				<p id="project-count"><span>9</span> projets.</p>
+				<p id="project-count"><span>11</span> projets.</p>
 
 			</div>
 
