@@ -413,7 +413,7 @@ portfolio-webdesigner
 #project-count {
   padding-top: 10px;
 }
-@media (min-width: 768px) {
+@media (min-width: 992px) {
   #project-count {
     text-align: right;
   }
@@ -494,6 +494,11 @@ project page
   max-width: 100%;
   display: inline-block;
   margin-bottom: 30px;
+}
+@media (min-width: 1200px) {
+  .project-image.col-lg-4 {
+    width: 33.3%;
+  }
 }
 /*
 competences

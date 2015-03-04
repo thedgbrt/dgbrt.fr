@@ -54,7 +54,7 @@ portfolio-webdesigner
 	
 	padding-top: 10px;
 
-	@media(min-width: @screen-sm-min){
+	@media(min-width: @screen-md-min){
 		
 		text-align:right;
 
@@ -123,8 +123,11 @@ project page
 	display:inline-block;
 	margin-bottom: @grid-gutter-width;
 }
-.project-image.col-lg-4{ // fixes masonry percentage sizing bug
-	width: 33.3%;
+
+@media(min-width: @screen-lg-min){
+	.project-image.col-lg-4{ // fixes masonry percentage sizing bug
+		width: 33.3%;
+	}
 }
 
 /*
