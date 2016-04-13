@@ -1,3 +1,4 @@
+encoding: utf-8
 source:      .
 destination: ./_site
 exclude: ['*.less', 'node_modules']

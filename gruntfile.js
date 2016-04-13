@@ -82,7 +82,7 @@ module.exports = function(grunt) {
     }
 
   });
-  
+
   // watch changes
   grunt.loadNpmTasks('grunt-contrib-watch');
 
